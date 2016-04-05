@@ -50,7 +50,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="yRw-dT-Bty" kind="presentation" identifier="createAccountSegue" id="PUG-dZ-RWX"/>
+                                    <segue destination="yRw-dT-Bty" kind="presentation" identifier="createAccountSegue" id="p8B-ci-Voe"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -172,8 +172,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Problems Wrong on Homework" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2B3-3g-kpo">
-                                <rect key="frame" x="20" y="184" width="374" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Problems Wrong on Homework" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2B3-3g-kpo">
+                                <rect key="frame" x="20" y="140" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                 <connections>
@@ -185,11 +185,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="wBl-pb-vhy">
-                                <rect key="frame" x="20" y="222" width="374" height="298"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="wBl-pb-vhy">
+                                <rect key="frame" x="20" y="178" width="374" height="342"/>
                             </scrollView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Plan Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qtq-v8-hHP">
-                                <rect key="frame" x="20" y="125" width="374" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Plan Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qtq-v8-hHP">
+                                <rect key="frame" x="20" y="81" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -271,7 +271,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="createAccount:" destination="yRw-dT-Bty" eventType="touchUpInside" id="OFm-kr-xcp"/>
+                                    <action selector="createAccount:" destination="yRw-dT-Bty" eventType="touchUpInside" id="2z2-q4-se3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPF-s7-48v">
@@ -302,6 +302,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="XjY-Ex-Men" id="epA-je-cwp"/>
                         <outlet property="passwordTextField" destination="ea3-ce-Fiw" id="bqa-nS-Gxj"/>
+                        <outlet property="usernameTextField" destination="rlJ-5r-DmY" id="SXt-XF-Xj5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sNB-7w-h4l" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -329,6 +330,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Bae-uu-Z9r"/>
+        <segue reference="tfi-2f-jZo"/>
     </inferredMetricsTieBreakers>
 </document>

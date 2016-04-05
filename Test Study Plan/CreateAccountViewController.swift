@@ -1,3 +1,4 @@
+
 //
 //  CreateAccountViewController.swift
 //  Test Study Plan
@@ -12,11 +13,10 @@ class CreateAccountViewController: UIViewController {
     
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var usernameTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
-        view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -28,17 +28,18 @@ class CreateAccountViewController: UIViewController {
     @IBAction func createAccount(sender: AnyObject) {
         let email = self.emailTextField.text
         let password = self.passwordTextField.text
-        
+        print("in")
         if email != "" && password != ""
         {
             FIREBASE_REF.createUser(email, password: password, withValueCompletionBlock: { (error, authData) -> Void in
-                
+                print("in")
                 if error == nil
                 {
                     FIREBASE_REF.authUser(email, password: password, withCompletionBlock: { error, authData in
-                        
+                        print("in")
                         if error == nil
                         {
+                            print("in")
                             NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: "uid")
                             NSUserDefaults.standardUserDefaults().synchronize()
                             self.dismissViewControllerAnimated(true,completion: nil)

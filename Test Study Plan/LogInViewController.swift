@@ -21,8 +21,6 @@ class LogInViewController: UIViewController {
         {
             performSegueWithIdentifier("plansSegue", sender: nil)
         }
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
-        view.addGestureRecognizer(tap)
     }
     
     //Calls this function when the tap is recognized.
