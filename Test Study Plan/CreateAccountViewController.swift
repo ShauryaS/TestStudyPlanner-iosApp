@@ -8,6 +8,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CreateAccountViewController: UIViewController {
     
@@ -28,20 +29,22 @@ class CreateAccountViewController: UIViewController {
     @IBAction func createAccount(sender: AnyObject) {
         let email = self.emailTextField.text
         let password = self.passwordTextField.text
-        print("in")
+    
         if email != "" && password != ""
         {
             FIREBASE_REF.createUser(email, password: password, withValueCompletionBlock: { (error, authData) -> Void in
-                print("in")
                 if error == nil
                 {
                     FIREBASE_REF.authUser(email, password: password, withCompletionBlock: { error, authData in
                         print("in")
                         if error == nil
                         {
-                            print("in")
                             NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: "uid")
                             NSUserDefaults.standardUserDefaults().synchronize()
+                            var ref = Firebase(url: "https://test-study-plan-ios.firebaseio.com/")
+                            var dataRef = ref.childByAppendingPath("data")
+                            var data = ["username": self.usernameTextField.text!]
+                            dataRef.setValue(data)
                             self.dismissViewControllerAnimated(true,completion: nil)
                         }
                         else
