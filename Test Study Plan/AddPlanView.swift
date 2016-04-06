@@ -6,6 +6,7 @@
 //  Copyright © 2016 Shaurya Srivastava. All rights reserved.
 //
 
+import Firebase
 import UIKit
 
 class AddPlansView: UIViewController{
@@ -53,6 +54,9 @@ class AddPlansView: UIViewController{
         days = Int(dayTF.text!)!
         hrs = Int(hourTF.text!)!
         calculate()
+        let ref = Firebase(url: "https://test-study-plan-ios.firebaseio.com/")
+        let planRef = ref.childByAppendingPath(name)
+        let planData = ["Name of Plan": name, "Days Till Test": days, "Hours Per Day to Study": hrs, "Problems Wrong per Section": probsWrong, "Time to Study Per Section":timePerSec]
     }
     
     func calculate(){
