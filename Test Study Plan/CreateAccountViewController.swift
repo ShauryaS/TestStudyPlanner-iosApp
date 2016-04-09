@@ -27,8 +27,11 @@ class CreateAccountViewController: UIViewController {
     }
     
     @IBAction func createAccount(sender: AnyObject) {
-        let email = self.emailTextField.text
+        let email = self.emailTextField.text!
         let password = self.passwordTextField.text
+        let username = self.usernameTextField.text!
+        GlobalInfo.setUsername(username)
+        GlobalInfo.setEmail(email)
     
         if email != "" && password != ""
         {
@@ -42,8 +45,8 @@ class CreateAccountViewController: UIViewController {
                             NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: "uid")
                             NSUserDefaults.standardUserDefaults().synchronize()
                             let ref = Firebase(url: "https://test-study-plan-ios.firebaseio.com/")
-                            let dataRef = ref.childByAppendingPath(self.usernameTextField.text!+" data")
-                            let data = ["username": self.usernameTextField.text!]
+                            let dataRef = ref.childByAppendingPath(username+" data")
+                            let data = ["username": username]
                             dataRef.setValue(data)
                             self.dismissViewControllerAnimated(true,completion: nil)
                         }

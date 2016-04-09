@@ -14,6 +14,7 @@
 		4910F3881C8EB7340029BBEA /* Test_Study_PlanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4910F3871C8EB7340029BBEA /* Test_Study_PlanTests.swift */; };
 		4910F3931C8EB7340029BBEA /* Test_Study_PlanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4910F3921C8EB7340029BBEA /* Test_Study_PlanUITests.swift */; };
 		491FD8081C97C6A3009BFC4F /* AddPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491FD8071C97C6A3009BFC4F /* AddPlanView.swift */; };
+		49971A631CB8C09600AAF8DF /* GlobalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49971A621CB8C09600AAF8DF /* GlobalInfo.swift */; };
 		49A1DC851C968298005C1FDF /* PlansView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A1DC841C968298005C1FDF /* PlansView.swift */; };
 		49A1DC871C96A1F2005C1FDF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A1DC861C96A1F2005C1FDF /* SettingsView.swift */; };
 		49F185331C8FE8C400E7032F /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F185321C8FE8C400E7032F /* BaseService.swift */; };
@@ -54,6 +55,7 @@
 		4910F3921C8EB7340029BBEA /* Test_Study_PlanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_Study_PlanUITests.swift; sourceTree = "<group>"; };
 		4910F3941C8EB7340029BBEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		491FD8071C97C6A3009BFC4F /* AddPlanView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlanView.swift; sourceTree = "<group>"; };
+		49971A621CB8C09600AAF8DF /* GlobalInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalInfo.swift; sourceTree = "<group>"; };
 		49A1DC841C968298005C1FDF /* PlansView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlansView.swift; sourceTree = "<group>"; };
 		49A1DC861C96A1F2005C1FDF /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		49F185321C8FE8C400E7032F /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				49A1DC841C968298005C1FDF /* PlansView.swift */,
 				49A1DC861C96A1F2005C1FDF /* SettingsView.swift */,
 				491FD8071C97C6A3009BFC4F /* AddPlanView.swift */,
+				49971A621CB8C09600AAF8DF /* GlobalInfo.swift */,
 			);
 			path = "Test Study Plan";
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49971A631CB8C09600AAF8DF /* GlobalInfo.swift in Sources */,
 				49F185371C900FE300E7032F /* CreateAccountViewController.swift in Sources */,
 				4910F3731C8EB7330029BBEA /* AppDelegate.swift in Sources */,
 				491FD8081C97C6A3009BFC4F /* AddPlanView.swift in Sources */,
