@@ -51,7 +51,10 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="yRw-dT-Bty" kind="presentation" identifier="createAccountSegue" id="p8B-ci-Voe"/>
+                                    <segue destination="yRw-dT-Bty" kind="presentation" identifier="createAccountSegue" id="p8B-ci-Voe">
+                                        <segue key="commit" inheritsFrom="parent" id="Grg-1F-BYL"/>
+                                        <segue key="preview" inheritsFrom="commit" id="OOF-xp-HFv"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -139,14 +142,8 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="2XP-7f-s4a"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pt1-4Y-XaX">
-                                <rect key="frame" x="0.0" y="64" width="414" height="50"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvq-i6-VI2">
-                                <rect key="frame" x="20" y="122" width="374" height="30"/>
+                                <rect key="frame" x="20" y="105" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Change Username">
                                     <color key="titleColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
@@ -155,6 +152,19 @@
                                     <segue destination="MBE-2n-Lvw" kind="show" identifier="usernameEditSegue" id="ceg-7H-aaf">
                                         <segue key="commit" inheritsFrom="parent" id="hAp-Hl-JHl"/>
                                         <segue key="preview" inheritsFrom="commit" id="Rgt-ka-kg4"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vJ-8B-uuK">
+                                <rect key="frame" x="20" y="162" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Change Password">
+                                    <color key="titleColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Z34-W2-hm0" kind="show" identifier="changePasswordSegue" id="3tr-g3-6il">
+                                        <segue key="commit" inheritsFrom="parent" id="jB5-VE-MrI"/>
+                                        <segue key="preview" inheritsFrom="commit" id="dRa-SQ-gfp"/>
                                     </segue>
                                 </connections>
                             </button>
@@ -169,10 +179,10 @@
             </objects>
             <point key="canvasLocation" x="245" y="2038"/>
         </scene>
-        <!--View Controller-->
+        <!--Change Username-->
         <scene sceneID="2nG-jl-OtQ">
             <objects>
-                <viewController id="MBE-2n-Lvw" sceneMemberID="viewController">
+                <viewController id="MBE-2n-Lvw" customClass="ChangeUsername" customModule="Test_Study_Plan" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ocl-Zf-OJW"/>
                         <viewControllerLayoutGuide type="bottom" id="s2X-bl-4S7"/>
@@ -181,12 +191,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Change Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ak-ax-Jrs">
-                                <rect key="frame" x="0.0" y="28" width="414" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Old Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pwm-iX-Upe">
                                 <rect key="frame" x="20" y="87" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -202,20 +206,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0iJ-gY-z5c">
-                                <rect key="frame" x="20" y="286" width="374" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ne8-xK-Je3">
-                                <rect key="frame" x="20" y="353" width="374" height="30"/>
+                                <rect key="frame" x="20" y="292" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Save New Username">
                                     <color key="titleColor" red="0.039032244753385681" green="0.6331530448717948" blue="0.250711956666757" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vln-63-l8r" kind="show" id="4v6-bj-kev"/>
+                                    <segue destination="eA8-TW-SKv" kind="show" identifier="backToMainFromUsernameSegue" id="gAf-Xn-6mm">
+                                        <segue key="commit" inheritsFrom="parent" id="yaC-dC-kHd"/>
+                                        <segue key="preview" inheritsFrom="commit" id="xSw-G5-HpS"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -245,7 +247,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Problems Wrong on Homework" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2B3-3g-kpo">
-                                <rect key="frame" x="20" y="140" width="374" height="30"/>
+                                <rect key="frame" x="20" y="184" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                 <connections>
@@ -258,10 +260,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="wBl-pb-vhy">
-                                <rect key="frame" x="20" y="178" width="374" height="342"/>
+                                <rect key="frame" x="20" y="222" width="374" height="298"/>
                             </scrollView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Plan Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qtq-v8-hHP">
-                                <rect key="frame" x="20" y="81" width="374" height="30"/>
+                                <rect key="frame" x="20" y="125" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -312,6 +314,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Bo-kM-dxN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="966" y="2038"/>
+        </scene>
+        <!--Change Password-->
+        <scene sceneID="hmy-H3-qCv">
+            <objects>
+                <viewController id="Z34-W2-hm0" customClass="ChangePassword" customModule="Test_Study_Plan" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CxZ-VK-FPz"/>
+                        <viewControllerLayoutGuide type="bottom" id="n0f-pe-Q6f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jPz-u6-eg5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Old Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nQo-mL-iX0">
+                                <rect key="frame" x="20" y="94" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xe6-P3-DMv">
+                                <rect key="frame" x="20" y="154" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FGF-ep-wEV">
+                                <rect key="frame" x="20" y="216" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zS-6E-cq8">
+                                <rect key="frame" x="20" y="287" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Save New Password">
+                                    <color key="titleColor" red="0.03903224475" green="0.63315304490000002" blue="0.25071195670000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="eA8-TW-SKv" kind="show" identifier="backToMainFromPasswordSegue" id="e0X-dd-WUJ">
+                                        <segue key="commit" inheritsFrom="parent" id="5SB-4A-sHM"/>
+                                        <segue key="preview" inheritsFrom="commit" id="wVp-Az-7vy"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xfd-rj-lf8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="966" y="2887"/>
         </scene>
         <!--Create Account View Controller-->
         <scene sceneID="luU-6f-W19">
@@ -402,8 +455,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4v6-bj-kev"/>
+        <segue reference="3tr-g3-6il"/>
+        <segue reference="Bae-uu-Z9r"/>
         <segue reference="ceg-7H-aaf"/>
-        <segue reference="tfi-2f-jZo"/>
+        <segue reference="p8B-ci-Voe"/>
     </inferredMetricsTieBreakers>
 </document>
