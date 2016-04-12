@@ -11,6 +11,10 @@ import UIKit
 
 class ChangeUsername: UIViewController{
     
+    @IBOutlet var oldUsernameTB: UITextField!
+    @IBOutlet var newUsernameTB: UITextField!
+    @IBOutlet var confirmUsernameTB: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title="Change Username"
@@ -20,6 +24,10 @@ class ChangeUsername: UIViewController{
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func updateUsername(sender: AnyObject) {
+        
     }
     
 }

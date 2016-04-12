@@ -26,7 +26,7 @@ class AddPlansView: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title="Plans"
+        navigationItem.title="Create Plan"
         dispProbs.contentSize = CGSizeMake(374,25)
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -68,7 +68,7 @@ class AddPlansView: UIViewController{
         for i in 0...probsWrong.capacity{
             sumOfProbsWrong+=Double(probsWrong[i])
         }
-        let propScale = sumOfProbsWrong/Double(hrs)
+        let propScale = (Double(hrs)*Double(days))/Double(sumOfProbsWrong)
         for i in 0...probsWrong.capacity{
             timePerSec.append(Int(Double(probsWrong[i])*propScale)*60)
         }
