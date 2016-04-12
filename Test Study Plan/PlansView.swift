@@ -12,6 +12,7 @@ class PlansView: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title="List of Plans"
         // Do any additional setup after loading the view, typically from a nib.
     }
     
