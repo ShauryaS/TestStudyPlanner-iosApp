@@ -30,8 +30,6 @@ class CreateAccountViewController: UIViewController {
         let email = self.emailTextField.text!
         let password = self.passwordTextField.text
         let username = self.usernameTextField.text!
-        GlobalInfo.setUsername(username)
-        GlobalInfo.setEmail(email)
     
         if email != "" && password != ""
         {

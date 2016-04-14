@@ -56,7 +56,7 @@ class AddPlansView: UIViewController{
         hrs = Int(hourTF.text!)!
         calculate()
         let ref = Firebase(url: "https://test-study-plan-ios.firebaseio.com/")
-        let dataRef = ref.childByAppendingPath(GlobalInfo.getUsername()+" data")
+        let dataRef = ref.childByAppendingPath(/*GlobalInfo.getUsername()+*/" data")//query the username
         let plan = ["Name of Plan": name]
         dataRef.updateChildValues(plan)
         let planData = ["Days Till Test": days, "Hours Per Day to Study": hrs, "Problems Wrong per Section": probsWrong, "Time to Study Per Section":timePerSec]
@@ -64,13 +64,11 @@ class AddPlansView: UIViewController{
     }
     
     func calculate(){
-        var sumOfProbsWrong = 0.0
-        for i in 0...probsWrong.capacity{
-            sumOfProbsWrong+=Double(probsWrong[i])
-        }
+        let sumOfProbsWrong = probsWrong.reduce(0, combine: +)
         let propScale = (Double(hrs)*Double(days))/Double(sumOfProbsWrong)
-        for i in 0...probsWrong.capacity{
-            timePerSec.append(Int(Double(probsWrong[i])*propScale)*60)
+        for i in probsWrong{
+            let temp = Double(i)*propScale*60
+            timePerSec.append(Int(temp))
         }
     }
     
