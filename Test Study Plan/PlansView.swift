@@ -10,9 +10,13 @@ import UIKit
 
 class PlansView: UIViewController{
     
+    @IBOutlet var plansList: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title="List of Plans"
+        plansList.contentSize.height = 25
+        loadPlans()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -21,5 +25,8 @@ class PlansView: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
+    func loadPlans(){
+        
+    }
     
 }

@@ -28,7 +28,14 @@ class AddPlansView: UIViewController{
         super.viewDidLoad()
         navigationItem.title="Create Plan"
         dispProbs.contentSize = CGSizeMake(374,25)
-        // Do any additional setup after loading the view, typically from a nib.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+    }
+    
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,7 +66,7 @@ class AddPlansView: UIViewController{
         let dataRef = ref.childByAppendingPath("Users").childByAppendingPath(ref.authData.uid).childByAppendingPath("Plans")
         dataRef.updateChildValues([name: name])
         let newRef = dataRef.childByAppendingPath(name)
-        let planData = ["Days Till Test": days, "Hours Per Day to Study": hrs, "Problems Wrong per Section": probsWrong, "Time to Study Per Section":timePerSec]
+        let planData = ["Time to Study Per Section":timePerSec]
         newRef.setValue(planData)
     }
     

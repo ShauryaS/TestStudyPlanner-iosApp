@@ -114,6 +114,9 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="plansList" destination="Vme-nz-23E" id="c3E-f1-uFP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bvd-no-QfY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -228,7 +231,7 @@
                     <connections>
                         <outlet property="confirmUsernameTB" destination="fr7-Qe-rCj" id="z1A-YJ-yxA"/>
                         <outlet property="newUsernameTB" destination="XL0-cf-iyB" id="UEk-yj-7MG"/>
-                        <outlet property="oldUserNameTB" destination="Pwm-iX-Upe" id="Zpi-Gc-gfo"/>
+                        <outlet property="oldUsernameTB" destination="Pwm-iX-Upe" id="yEe-5M-35o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6SB-43-r3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -462,9 +465,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gAf-Xn-6mm"/>
-        <segue reference="ceg-7H-aaf"/>
+        <segue reference="tfi-2f-jZo"/>
         <segue reference="3tr-g3-6il"/>
+        <segue reference="ceg-7H-aaf"/>
         <segue reference="p8B-ci-Voe"/>
     </inferredMetricsTieBreakers>
 </document>
