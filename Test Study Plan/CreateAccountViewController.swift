@@ -42,10 +42,9 @@ class CreateAccountViewController: UIViewController {
                         {
                             NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: "uid")
                             NSUserDefaults.standardUserDefaults().synchronize()
-                            let ref = Firebase(url: "https://test-study-plan-ios.firebaseio.com/")
-                            let dataRef = ref.childByAppendingPath(username+" data")
+                            let ref = Firebase(url: "https://test-study-plan-ios.firebaseio.com")
                             let data = ["username": username]
-                            dataRef.setValue(data)
+                            ref.childByAppendingPath("Users").childByAppendingPath(authData.uid).setValue(data)
                             self.dismissViewControllerAnimated(true,completion: nil)
                         }
                         else

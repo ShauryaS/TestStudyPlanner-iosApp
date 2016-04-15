@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LogInViewController: UIViewController {
     
@@ -16,9 +17,8 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if NSUserDefaults.standardUserDefaults().valueForKey("uid") != nil && CURRENT_USER.authData != nil
-        {
+        let ref = Firebase(url: "https://test-study-plan-ios.firebaseio.com")
+        if ref.authData != nil {
             performSegueWithIdentifier("plansSegue", sender: nil)
         }
     }
