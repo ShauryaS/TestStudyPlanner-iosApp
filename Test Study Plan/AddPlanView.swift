@@ -54,12 +54,11 @@ class AddPlansView: UIViewController{
         name = nameTF.text!
         days = Int(dayTF.text!)!
         hrs = Int(hourTF.text!)!
-        let planName = "Plan: "+name
         calculate()
         let ref = Firebase(url: "https://test-study-plan-ios.firebaseio.com/")
-        let dataRef = ref.childByAppendingPath("Users").childByAppendingPath(ref.authData.uid)
-        dataRef.updateChildValues([planName: planName])
-        let newRef = dataRef.childByAppendingPath(planName)
+        let dataRef = ref.childByAppendingPath("Users").childByAppendingPath(ref.authData.uid).childByAppendingPath("Plans")
+        dataRef.updateChildValues([name: name])
+        let newRef = dataRef.childByAppendingPath(name)
         let planData = ["Days Till Test": days, "Hours Per Day to Study": hrs, "Problems Wrong per Section": probsWrong, "Time to Study Per Section":timePerSec]
         newRef.setValue(planData)
     }
