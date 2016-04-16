@@ -14,7 +14,6 @@ class AddPlansView: UIViewController{
     @IBOutlet var probWrong: UITextField!
     @IBOutlet var dispProbs: UIScrollView!
     private var probsWrong = [Int]()
-    private var labels = [UILabel]()
     @IBOutlet var nameTF: UITextField!
     @IBOutlet var dayTF: UITextField!
     @IBOutlet var hourTF: UITextField!

@@ -298,7 +298,7 @@
                             <constraint firstItem="wBl-pb-vhy" firstAttribute="top" secondItem="2B3-3g-kpo" secondAttribute="bottom" constant="8" symbolic="YES" id="3AK-Uy-4Y1"/>
                             <constraint firstItem="VDS-br-fw4" firstAttribute="trailing" secondItem="Qtq-v8-hHP" secondAttribute="trailing" id="5sS-pj-o8c"/>
                             <constraint firstItem="VDS-br-fw4" firstAttribute="trailing" secondItem="cBp-zL-fUY" secondAttribute="trailingMargin" id="CXN-k4-eCY"/>
-                            <constraint firstItem="Qtq-v8-hHP" firstAttribute="top" secondItem="XMJ-8s-zp7" secondAttribute="bottom" constant="61" id="GH9-7w-KWv"/>
+                            <constraint firstItem="Qtq-v8-hHP" firstAttribute="top" secondItem="XMJ-8s-zp7" secondAttribute="bottom" constant="17" id="GH9-7w-KWv"/>
                             <constraint firstItem="VDS-br-fw4" firstAttribute="trailing" secondItem="2B3-3g-kpo" secondAttribute="trailing" id="IaQ-gK-jDA"/>
                             <constraint firstItem="2B3-3g-kpo" firstAttribute="top" secondItem="Qtq-v8-hHP" secondAttribute="bottom" constant="29" id="K9u-Oa-Lpu"/>
                             <constraint firstItem="VDS-br-fw4" firstAttribute="trailing" secondItem="wBl-pb-vhy" secondAttribute="trailing" id="Mee-qq-Ti3"/>
@@ -465,7 +465,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tfi-2f-jZo"/>
+        <segue reference="z2f-rt-gPW"/>
         <segue reference="3tr-g3-6il"/>
         <segue reference="ceg-7H-aaf"/>
         <segue reference="p8B-ci-Voe"/>
