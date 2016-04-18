@@ -84,19 +84,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vme-nz-23E">
-                                <rect key="frame" x="0.0" y="51" width="414" height="685"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cIW-xy-0kl">
+                                <rect key="frame" x="0.0" y="138" width="414" height="598"/>
                             </scrollView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fIG-xV-OnU">
+                                <rect key="frame" x="0.0" y="94" width="414" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="x3b-ad-rnU" id="nje-F4-9XC"/>
+                                </connections>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ZM-Zd-0e9">
+                                <rect key="frame" x="0.0" y="28" width="414" height="66"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Vme-nz-23E" firstAttribute="top" secondItem="sbD-7K-JeK" secondAttribute="topMargin" constant="51" id="RS5-TC-86C"/>
-                            <constraint firstAttribute="bottom" secondItem="Vme-nz-23E" secondAttribute="bottom" id="gf4-Ic-cSW"/>
-                            <constraint firstItem="Vme-nz-23E" firstAttribute="leading" secondItem="sbD-7K-JeK" secondAttribute="leading" id="vVa-Oi-h5r"/>
-                            <constraint firstAttribute="trailing" secondItem="Vme-nz-23E" secondAttribute="trailing" id="yfq-dP-I7V"/>
-                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="hVw-SV-A0d"/>
                     <navigationItem key="navigationItem" title="Plans" id="whR-Rd-dh8">
                         <barButtonItem key="leftBarButtonItem" systemItem="add" id="neQ-hS-2rE">
                             <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -111,16 +117,56 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="plansList" destination="Vme-nz-23E" id="c3E-f1-uFP"/>
+                        <outlet property="plansList" destination="cIW-xy-0kl" id="jQu-TH-Lo2"/>
+                        <outlet property="searchDisplayController" destination="MCV-Ct-Mjk" id="eFF-gv-0Co"/>
+                        <outlet property="welcomingLab" destination="0ZM-Zd-0e9" id="VNc-3m-5oL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bvd-no-QfY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="MCV-Ct-Mjk">
+                    <connections>
+                        <outlet property="delegate" destination="x3b-ad-rnU" id="gUz-8Z-eCP"/>
+                        <outlet property="searchBar" destination="fIG-xV-OnU" id="mxX-dy-jt6"/>
+                        <outlet property="searchContentsController" destination="x3b-ad-rnU" id="fvE-zy-0Re"/>
+                        <outlet property="searchResultsDataSource" destination="x3b-ad-rnU" id="dwf-Q3-YCJ"/>
+                        <outlet property="searchResultsDelegate" destination="x3b-ad-rnU" id="NTh-ss-SF1"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="966" y="1155"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mdW-kr-UFx">
+            <objects>
+                <viewController id="AGw-Im-p10" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dcv-RB-2Zv"/>
+                        <viewControllerLayoutGuide type="bottom" id="n7o-Xu-zla"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hFp-tg-eIQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnT-Td-Z9s">
+                                <rect key="frame" x="0.0" y="28" width="414" height="58"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pyj-fV-km7">
+                                <rect key="frame" x="0.0" y="94" width="414" height="642"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ERF-QZ-Xq6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1477" y="1155"/>
         </scene>
         <!--Settings View-->
         <scene sceneID="QTM-B8-z5s">
@@ -260,10 +306,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="wBl-pb-vhy">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="wBl-pb-vhy">
                                 <rect key="frame" x="20" y="178" width="374" height="342"/>
                             </scrollView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Plan Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qtq-v8-hHP">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Plan Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qtq-v8-hHP">
                                 <rect key="frame" x="20" y="81" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -282,7 +328,7 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Problems Wrong on Homework" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2B3-3g-kpo">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Problems Wrong on Homework" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2B3-3g-kpo">
                                 <rect key="frame" x="20" y="140" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>

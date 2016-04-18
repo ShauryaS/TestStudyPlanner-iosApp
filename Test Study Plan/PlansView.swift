@@ -13,11 +13,13 @@ class PlansView: UIViewController{
     
     @IBOutlet var plansList: UIScrollView!
     private var i=1
+    @IBOutlet var welcomingLab: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title="List of Plans"
         plansList.contentSize.height = 25
+        setWelcomeLab()
         loadPlans()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -27,9 +29,19 @@ class PlansView: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
+    func setWelcomeLab(){
+        let baseRef = Firebase(url: "https://test-study-plan-ios.firebaseio.com")
+        let ref = baseRef.childByAppendingPath("Users").childByAppendingPath(baseRef.authData.uid)
+        ref.queryOrderedByChild("username").observeEventType(.ChildAdded, withBlock: { snapshot in
+            if let name = snapshot.value["username"] as? String {
+                self.welcomingLab.text = name
+            }
+        })
+    }
+    
     func loadPlans(){
-        var ref = Firebase(url: "https://test-study-plan-ios.firebaseio.com/Users")
-        ref = ref.childByAppendingPath(ref.authData.uid).childByAppendingPath("Plans")
+        let baseRef = Firebase(url: "https://test-study-plan-ios.firebaseio.com")
+        let ref = baseRef.childByAppendingPath("Users").childByAppendingPath(baseRef.authData.uid).childByAppendingPath("Plans")
         ref.queryOrderedByKey().observeEventType(.ChildAdded, withBlock: {snapshot in
             let button = UIButton(frame: CGRectMake(0,(CGFloat(self.i)-1)*25,450,25))
             button.titleLabel!.font = button.titleLabel!.font.fontWithSize(25)
