@@ -13,7 +13,6 @@ let BASE_URL = "https://test-study-plan-ios.firebaseio.com"
 let FIREBASE_REF = Firebase(url: BASE_URL)
 
 var CURRENT_USER: Firebase{
-    let userID = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String
-    let currentUser = Firebase(url: "\(FIREBASE_REF)").childByAppendingPath("users").childByAppendingPath(userID)
+    let currentUser = Firebase(url: "\(FIREBASE_REF)").childByAppendingPath("Users").childByAppendingPath(FIREBASE_REF.authData.uid)
     return currentUser!
 }

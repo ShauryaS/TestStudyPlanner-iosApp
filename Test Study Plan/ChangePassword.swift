@@ -15,7 +15,7 @@ class ChangePassword: UIViewController{
         super.viewDidLoad()
         navigationItem.title="Change Password"
         // Do any additional setup after loading the view, typically from a nib.
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ChangePassword.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
     

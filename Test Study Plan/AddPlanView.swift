@@ -27,7 +27,7 @@ class AddPlansView: UIViewController{
         super.viewDidLoad()
         navigationItem.title="Create Plan"
         dispProbs.contentSize = CGSizeMake(374,25)
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AddPlansView.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
     

@@ -18,10 +18,12 @@ class LogInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let ref = Firebase(url: "https://test-study-plan-ios.firebaseio.com")
-        if ref.authData != nil {
-            performSegueWithIdentifier("plansSegue", sender: nil)
-        }
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        ref.observeAuthEventWithBlock({ authData in
+            if authData != nil {
+                self.performSegueWithIdentifier("plansSegue", sender: nil)
+            }
+        })
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LogInViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
     

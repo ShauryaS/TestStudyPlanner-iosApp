@@ -19,7 +19,7 @@ class ChangeUsername: UIViewController{
         super.viewDidLoad()
         navigationItem.title="Change Username"
         // Do any additional setup after loading the view, typically from a nib.
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ChangeUsername.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
     

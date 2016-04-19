@@ -30,8 +30,7 @@ class PlansView: UIViewController{
     }
     
     func setWelcomeLab(){
-        let baseRef = Firebase(url: "https://test-study-plan-ios.firebaseio.com")
-        let ref = baseRef.childByAppendingPath("Users").childByAppendingPath(baseRef.authData.uid)
+        let ref = Firebase(url: "https://test-study-plan-ios.firebaseio.com").childByAppendingPath("Users").childByAppendingPath(CURRENT_USER.authData.uid)
         ref.queryOrderedByChild("username").observeEventType(.ChildAdded, withBlock: { snapshot in
             if let name = snapshot.value["username"] as? String {
                 self.welcomingLab.text = name
@@ -40,8 +39,7 @@ class PlansView: UIViewController{
     }
     
     func loadPlans(){
-        let baseRef = Firebase(url: "https://test-study-plan-ios.firebaseio.com")
-        let ref = baseRef.childByAppendingPath("Users").childByAppendingPath(baseRef.authData.uid).childByAppendingPath("Plans")
+        let ref = Firebase(url: "https://test-study-plan-ios.firebaseio.com").childByAppendingPath("Users").childByAppendingPath(CURRENT_USER.authData.uid).childByAppendingPath("Plans")
         ref.queryOrderedByKey().observeEventType(.ChildAdded, withBlock: {snapshot in
             let button = UIButton(frame: CGRectMake(0,(CGFloat(self.i)-1)*25,450,25))
             button.titleLabel!.font = button.titleLabel!.font.fontWithSize(25)
