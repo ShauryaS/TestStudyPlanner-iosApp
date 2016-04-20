@@ -17,8 +17,7 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let ref = Firebase(url: "https://test-study-plan-ios.firebaseio.com")
-        ref.observeAuthEventWithBlock({ authData in
+        FIREBASE_REF.observeAuthEventWithBlock({ authData in
             if authData != nil {
                 self.performSegueWithIdentifier("plansSegue", sender: nil)
             }
@@ -48,7 +47,7 @@ class LogInViewController: UIViewController {
                 
                 if error == nil
                 {
-                    NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: "uid")
+                    
                     
                 }
                 else
