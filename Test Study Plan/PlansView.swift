@@ -19,8 +19,8 @@ class PlansView: UIViewController{
         super.viewDidLoad()
         navigationItem.title="List of Plans"
         plansList.contentSize.height = 25
-        setWelcomeLab()
-        loadPlans()
+        //setWelcomeLab()
+        //loadPlans()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
