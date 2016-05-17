@@ -47,6 +47,7 @@ class AddPlansView: UIViewController{
         let label = UILabel(frame: CGRectMake(0,(CGFloat(i)-1)*25,374,25))
         label.text = "Problems wrong - HW#"+String(i)+": "+probWrong.text!
         label.font = label.font.fontWithSize(20)
+        label.textColor = UIColor.whiteColor()
         dispProbs.addSubview(label)
         if (CGFloat(i))*25>dispProbs.contentSize.height{
             dispProbs.contentSize.height+=25
@@ -61,10 +62,9 @@ class AddPlansView: UIViewController{
         days = Int(dayTF.text!)!
         hrs = Int(hourTF.text!)!
         calculate()
-        let ref = Firebase(url: "https://test-study-plan-ios.firebaseio.com/")
-        let dataRef = ref.childByAppendingPath("Users").childByAppendingPath(ref.authData.uid).childByAppendingPath("Plans")
-        dataRef.updateChildValues([name: name])
-        let newRef = dataRef.childByAppendingPath(name)
+        let ref = CURRENT_USER.childByAppendingPath("plans")
+        ref.updateChildValues([name: name])
+        let newRef = ref.childByAppendingPath(name)
         let planData = ["Time to Study Per Section":timePerSec]
         newRef.setValue(planData)
     }

@@ -48,11 +48,11 @@ class CreateAccountViewController: UIViewController {
                         print("in")
                         if error == nil
                         {
-                            /*let data = ["username": username]
-                            FIREBASE_REF.childByAppendingPath("Users").childByAppendingPath(authData.uid).setValue(data)
-                            self.dismissViewControllerAnimated(true,completion: nil)*/
                             NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: "uid")
                             NSUserDefaults.standardUserDefaults().synchronize()
+                            let data = ["username": username]
+                            FIREBASE_REF.childByAppendingPath("users").childByAppendingPath(authData.uid).setValue(data)
+                            self.dismissViewControllerAnimated(true,completion: nil)
                             print("Account Created :)")
                             self.dismissViewControllerAnimated(true,completion: nil)
                         }

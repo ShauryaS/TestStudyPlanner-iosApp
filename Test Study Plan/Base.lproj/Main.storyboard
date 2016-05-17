@@ -31,13 +31,14 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test Study Plan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vME-hY-PMm">
                                 <rect key="frame" x="0.0" y="108" width="414" height="64"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <nil key="highlightedColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N75-6B-y1S">
                                 <rect key="frame" x="20" y="380" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Login">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PHH-Fn-Njq"/>
@@ -47,7 +48,7 @@
                                 <rect key="frame" x="20" y="442" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Sign Up">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="yRw-dT-Bty" kind="presentation" identifier="createAccountSegue" id="p8B-ci-Voe">
@@ -57,7 +58,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
@@ -72,7 +73,7 @@
             </objects>
             <point key="canvasLocation" x="245" y="305"/>
         </scene>
-        <!--Plans-->
+        <!--Plans View-->
         <scene sceneID="vbo-Ix-ebd">
             <objects>
                 <viewController id="x3b-ad-rnU" customClass="PlansView" customModule="Test_Study_Plan" customModuleProvider="target" sceneMemberID="viewController">
@@ -84,34 +85,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cIW-xy-0kl">
-                                <rect key="frame" x="0.0" y="138" width="414" height="598"/>
-                            </scrollView>
                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fIG-xV-OnU">
-                                <rect key="frame" x="0.0" y="94" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="x3b-ad-rnU" id="nje-F4-9XC"/>
                                 </connections>
                             </searchBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ZM-Zd-0e9">
-                                <rect key="frame" x="0.0" y="28" width="414" height="66"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cIW-xy-0kl">
+                                <rect key="frame" x="0.0" y="108" width="414" height="628"/>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Plans" id="whR-Rd-dh8">
+                    <navigationItem key="navigationItem" id="whR-Rd-dh8">
                         <barButtonItem key="leftBarButtonItem" systemItem="add" id="neQ-hS-2rE">
-                            <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="w9i-Re-62c" kind="show" identifier="addPlanSegue" id="Tbp-or-dkx"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="mfL-RA-ccP">
-                            <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="vln-63-l8r" kind="show" id="Y3h-Wl-FfG"/>
                             </connections>
@@ -122,7 +118,7 @@
                     <connections>
                         <outlet property="plansList" destination="cIW-xy-0kl" id="jQu-TH-Lo2"/>
                         <outlet property="searchDisplayController" destination="MCV-Ct-Mjk" id="eFF-gv-0Co"/>
-                        <outlet property="welcomingLab" destination="0ZM-Zd-0e9" id="VNc-3m-5oL"/>
+                        <segue destination="AGw-Im-p10" kind="show" identifier="planInfoSegue" id="T18-Ng-Nip"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bvd-no-QfY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -150,19 +146,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pyj-fV-km7">
+                                <rect key="frame" x="0.0" y="141" width="414" height="595"/>
+                            </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnT-Td-Z9s">
-                                <rect key="frame" x="0.0" y="28" width="414" height="58"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="69"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pyj-fV-km7">
-                                <rect key="frame" x="0.0" y="94" width="414" height="642"/>
-                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="planNameLable" destination="jnT-Td-Z9s" id="cZ9-mT-UdJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ERF-QZ-Xq6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -218,7 +217,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -254,8 +253,8 @@
                                 <rect key="frame" x="20" y="266" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Save New Username">
-                                    <color key="titleColor" red="0.039032244753385681" green="0.6331530448717948" blue="0.250711956666757" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="updateUsername:" destination="MBE-2n-Lvw" eventType="touchUpInside" id="uOv-g1-yi6"/>
@@ -271,7 +270,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
@@ -306,10 +305,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="wBl-pb-vhy">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="wBl-pb-vhy">
                                 <rect key="frame" x="20" y="178" width="374" height="342"/>
                             </scrollView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Plan Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qtq-v8-hHP">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Plan Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qtq-v8-hHP">
                                 <rect key="frame" x="20" y="81" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -318,7 +317,7 @@
                                 <rect key="frame" x="167" y="651" width="81" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Add Plan">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="addPlan:" destination="w9i-Re-62c" eventType="touchUpInside" id="p2X-V9-v6t"/>
@@ -328,7 +327,7 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Problems Wrong on Homework" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2B3-3g-kpo">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Problems Wrong on Homework" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2B3-3g-kpo">
                                 <rect key="frame" x="20" y="140" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
@@ -337,26 +336,26 @@
                                 </connections>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="VDS-br-fw4" firstAttribute="trailing" secondItem="Mxo-ue-T0K" secondAttribute="trailing" id="0Eb-BG-948"/>
-                            <constraint firstItem="6hz-dI-M5d" firstAttribute="top" secondItem="VDS-br-fw4" secondAttribute="bottom" constant="25" id="38N-T7-ZC3"/>
-                            <constraint firstItem="wBl-pb-vhy" firstAttribute="top" secondItem="2B3-3g-kpo" secondAttribute="bottom" constant="8" symbolic="YES" id="3AK-Uy-4Y1"/>
-                            <constraint firstItem="VDS-br-fw4" firstAttribute="trailing" secondItem="Qtq-v8-hHP" secondAttribute="trailing" id="5sS-pj-o8c"/>
-                            <constraint firstItem="VDS-br-fw4" firstAttribute="trailing" secondItem="cBp-zL-fUY" secondAttribute="trailingMargin" id="CXN-k4-eCY"/>
-                            <constraint firstItem="Qtq-v8-hHP" firstAttribute="top" secondItem="XMJ-8s-zp7" secondAttribute="bottom" constant="17" id="GH9-7w-KWv"/>
-                            <constraint firstItem="VDS-br-fw4" firstAttribute="trailing" secondItem="2B3-3g-kpo" secondAttribute="trailing" id="IaQ-gK-jDA"/>
-                            <constraint firstItem="2B3-3g-kpo" firstAttribute="top" secondItem="Qtq-v8-hHP" secondAttribute="bottom" constant="29" id="K9u-Oa-Lpu"/>
-                            <constraint firstItem="VDS-br-fw4" firstAttribute="trailing" secondItem="wBl-pb-vhy" secondAttribute="trailing" id="Mee-qq-Ti3"/>
-                            <constraint firstItem="VDS-br-fw4" firstAttribute="leading" secondItem="wBl-pb-vhy" secondAttribute="leading" id="Uxx-ik-x0R"/>
-                            <constraint firstItem="VDS-br-fw4" firstAttribute="leading" secondItem="cBp-zL-fUY" secondAttribute="leadingMargin" id="a7h-Aq-8HW"/>
-                            <constraint firstItem="Mxo-ue-T0K" firstAttribute="top" secondItem="wBl-pb-vhy" secondAttribute="bottom" constant="20" id="arf-PU-p69"/>
-                            <constraint firstItem="VDS-br-fw4" firstAttribute="leading" secondItem="Mxo-ue-T0K" secondAttribute="leading" id="cI9-ze-wiN"/>
-                            <constraint firstItem="VDS-br-fw4" firstAttribute="leading" secondItem="Qtq-v8-hHP" secondAttribute="leading" id="e3Q-ne-tkq"/>
-                            <constraint firstAttribute="bottom" secondItem="VDS-br-fw4" secondAttribute="bottom" constant="110" id="nKR-xb-uCV"/>
-                            <constraint firstItem="VDS-br-fw4" firstAttribute="leading" secondItem="2B3-3g-kpo" secondAttribute="leading" id="qB8-H3-2gA"/>
-                            <constraint firstItem="VDS-br-fw4" firstAttribute="top" secondItem="Mxo-ue-T0K" secondAttribute="bottom" constant="26" id="wPN-gl-uNH"/>
-                            <constraint firstItem="VDS-br-fw4" firstAttribute="centerX" secondItem="6hz-dI-M5d" secondAttribute="centerX" id="xYe-Mi-xuJ"/>
+                            <constraint firstItem="Qtq-v8-hHP" firstAttribute="trailing" secondItem="2B3-3g-kpo" secondAttribute="trailing" id="0Zu-Ff-66v"/>
+                            <constraint firstItem="wBl-pb-vhy" firstAttribute="trailing" secondItem="Mxo-ue-T0K" secondAttribute="trailing" id="1ka-SG-fhZ"/>
+                            <constraint firstItem="2B3-3g-kpo" firstAttribute="top" secondItem="Qtq-v8-hHP" secondAttribute="bottom" constant="29" id="7f2-Xr-Lzf"/>
+                            <constraint firstItem="2B3-3g-kpo" firstAttribute="trailing" secondItem="wBl-pb-vhy" secondAttribute="trailing" id="9ic-sM-Ghd"/>
+                            <constraint firstItem="Mxo-ue-T0K" firstAttribute="top" secondItem="wBl-pb-vhy" secondAttribute="bottom" constant="20" id="ETH-Np-Z3O"/>
+                            <constraint firstItem="wBl-pb-vhy" firstAttribute="top" secondItem="2B3-3g-kpo" secondAttribute="bottom" constant="8" symbolic="YES" id="G8s-U0-tgu"/>
+                            <constraint firstItem="Mxo-ue-T0K" firstAttribute="trailing" secondItem="VDS-br-fw4" secondAttribute="trailing" id="Gan-cV-Atb"/>
+                            <constraint firstItem="Qtq-v8-hHP" firstAttribute="top" secondItem="XMJ-8s-zp7" secondAttribute="bottom" constant="61" id="H9A-u6-XUb"/>
+                            <constraint firstItem="wBl-pb-vhy" firstAttribute="leading" secondItem="Mxo-ue-T0K" secondAttribute="leading" id="JND-kv-rd3"/>
+                            <constraint firstItem="6hz-dI-M5d" firstAttribute="top" secondItem="VDS-br-fw4" secondAttribute="bottom" constant="25" id="JaD-A8-NWd"/>
+                            <constraint firstItem="Qtq-v8-hHP" firstAttribute="leading" secondItem="cBp-zL-fUY" secondAttribute="leadingMargin" id="MXB-jm-JX1"/>
+                            <constraint firstItem="VDS-br-fw4" firstAttribute="top" secondItem="Mxo-ue-T0K" secondAttribute="bottom" constant="26" id="MYz-7q-JUu"/>
+                            <constraint firstItem="2B3-3g-kpo" firstAttribute="leading" secondItem="wBl-pb-vhy" secondAttribute="leading" id="NLD-Jz-1gT"/>
+                            <constraint firstItem="Qtq-v8-hHP" firstAttribute="trailing" secondItem="cBp-zL-fUY" secondAttribute="trailingMargin" id="WHb-wt-kQe"/>
+                            <constraint firstItem="Qtq-v8-hHP" firstAttribute="leading" secondItem="2B3-3g-kpo" secondAttribute="leading" id="eKf-ps-avT"/>
+                            <constraint firstItem="O2t-pL-Y4W" firstAttribute="top" secondItem="6hz-dI-M5d" secondAttribute="bottom" constant="49" id="f6z-dt-U4P"/>
+                            <constraint firstItem="VDS-br-fw4" firstAttribute="centerX" secondItem="6hz-dI-M5d" secondAttribute="centerX" id="xfc-mg-xFx"/>
+                            <constraint firstItem="Mxo-ue-T0K" firstAttribute="leading" secondItem="VDS-br-fw4" secondAttribute="leading" id="zDe-l1-9tF"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -399,7 +398,7 @@
                                 <rect key="frame" x="20" y="271" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Save New Password">
-                                    <color key="titleColor" red="0.03903224475" green="0.63315304490000002" blue="0.25071195670000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="eA8-TW-SKv" kind="show" identifier="backToMainFromPasswordSegue" id="e0X-dd-WUJ">
@@ -414,7 +413,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
@@ -437,7 +436,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9q-Al-se9">
                                 <rect key="frame" x="0.0" y="105" width="414" height="66"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XjY-Ex-Men">
@@ -449,7 +448,7 @@
                                 <rect key="frame" x="20" y="434" width="374" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Sign Up">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="createAccount:" destination="yRw-dT-Bty" eventType="touchUpInside" id="2z2-q4-se3"/>
@@ -459,7 +458,7 @@
                                 <rect key="frame" x="20" y="512" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Cancel">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="cancel:" destination="yRw-dT-Bty" eventType="touchUpInside" id="HDV-6T-a6x"/>
@@ -476,7 +475,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <rect key="contentStretch" x="0.050000000000000003" y="0.0" width="1" height="1"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
@@ -511,9 +510,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3tr-g3-6il"/>
         <segue reference="v8c-Sc-fbl"/>
-        <segue reference="p8B-ci-Voe"/>
         <segue reference="ceg-7H-aaf"/>
+        <segue reference="3tr-g3-6il"/>
+        <segue reference="p8B-ci-Voe"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

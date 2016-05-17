@@ -17,6 +17,7 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
         FIREBASE_REF.observeAuthEventWithBlock({ authData in
             if authData != nil {
                 self.performSegueWithIdentifier("plansSegue", sender: nil)
