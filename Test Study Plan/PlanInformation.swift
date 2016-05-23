@@ -8,15 +8,19 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class PlanInformation: UIViewController{
     
     var planName = "";
     @IBOutlet var planNameLable: UILabel!
+    private var i = 0
+    @IBOutlet var planInfoDisp: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title="Plan Information"
+        planInfoDisp.contentSize.height = 30
         planNameLable.text = planName
         planNameLable.font = planNameLable.font.fontWithSize(25)
         planNameLable.textColor = UIColor.whiteColor()
@@ -30,7 +34,21 @@ class PlanInformation: UIViewController{
     }
     
     func showPlan(){
-        
+        CURRENT_USER.childByAppendingPath("plans").childByAppendingPath(planName).childByAppendingPath("time").queryOrderedByKey().observeEventType(.Value, withBlock: {snapshot in
+            for t in snapshot.children.allObjects as! [FDataSnapshot] {
+                let label = UILabel(frame: CGRectMake(0,5+(CGFloat(self.i)-3)*25,374,25))
+                var tl = "Time to Study for Section "+String(self.i+1)
+                tl = tl + ": "+(t.value.stringValue)+" minutes"
+                label.text = tl
+                label.font = label.font.fontWithSize(20)
+                label.textColor = UIColor.whiteColor()
+                self.planInfoDisp.addSubview(label)
+                if (5+CGFloat(self.i))*25>self.planInfoDisp.contentSize.height{
+                    self.planInfoDisp.contentSize.height+=30
+                }
+                self.i = self.i+1;
+            }
+        })
     }
 
 }

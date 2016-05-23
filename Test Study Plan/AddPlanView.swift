@@ -64,9 +64,12 @@ class AddPlansView: UIViewController{
         calculate()
         let ref = CURRENT_USER.childByAppendingPath("plans")
         ref.updateChildValues([name: name])
-        let newRef = ref.childByAppendingPath(name)
-        let planData = ["Time to Study Per Section":timePerSec]
-        newRef.setValue(planData)
+        let newRef = ref.childByAppendingPath(name).childByAppendingPath("time")
+        var count = 1;
+        for i in timePerSec{
+            newRef.updateChildValues(["time "+String(count):i])
+            count = count+1
+        }
     }
     
     func calculate(){

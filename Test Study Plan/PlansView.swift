@@ -21,7 +21,7 @@ class PlansView: UIViewController{
         nav?.tintColor = UIColor.redColor()
         nav?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         navigationItem.title="List of Plans"
-        plansList.contentSize.height = 45
+        plansList.contentSize.height = 40
         loadPlans()
         // Do any additional setup after loading the view, typically from a nib.
     }
