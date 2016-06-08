@@ -49,8 +49,6 @@ class LogInViewController: UIViewController {
                 if error == nil
                 {
                     NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: "uid")
-                    
-                    print("Logged In :)")
                 }
                 else
                 {

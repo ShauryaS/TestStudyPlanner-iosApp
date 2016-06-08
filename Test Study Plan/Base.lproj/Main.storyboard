@@ -346,7 +346,7 @@
                             <constraint firstItem="Mxo-ue-T0K" firstAttribute="top" secondItem="wBl-pb-vhy" secondAttribute="bottom" constant="20" id="ETH-Np-Z3O"/>
                             <constraint firstItem="wBl-pb-vhy" firstAttribute="top" secondItem="2B3-3g-kpo" secondAttribute="bottom" constant="8" symbolic="YES" id="G8s-U0-tgu"/>
                             <constraint firstItem="Mxo-ue-T0K" firstAttribute="trailing" secondItem="VDS-br-fw4" secondAttribute="trailing" id="Gan-cV-Atb"/>
-                            <constraint firstItem="Qtq-v8-hHP" firstAttribute="top" secondItem="XMJ-8s-zp7" secondAttribute="bottom" constant="17" id="H9A-u6-XUb"/>
+                            <constraint firstItem="Qtq-v8-hHP" firstAttribute="top" secondItem="XMJ-8s-zp7" secondAttribute="bottom" constant="61" id="H9A-u6-XUb"/>
                             <constraint firstItem="wBl-pb-vhy" firstAttribute="leading" secondItem="Mxo-ue-T0K" secondAttribute="leading" id="JND-kv-rd3"/>
                             <constraint firstItem="6hz-dI-M5d" firstAttribute="top" secondItem="VDS-br-fw4" secondAttribute="bottom" constant="25" id="JaD-A8-NWd"/>
                             <constraint firstItem="Qtq-v8-hHP" firstAttribute="leading" secondItem="cBp-zL-fUY" secondAttribute="leadingMargin" id="MXB-jm-JX1"/>
@@ -511,8 +511,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ceg-7H-aaf"/>
         <segue reference="gAf-Xn-6mm"/>
+        <segue reference="ceg-7H-aaf"/>
         <segue reference="3tr-g3-6il"/>
         <segue reference="p8B-ci-Voe"/>
     </inferredMetricsTieBreakers>

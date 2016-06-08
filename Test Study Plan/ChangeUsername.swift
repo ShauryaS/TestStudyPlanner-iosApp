@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class ChangeUsername: UIViewController{
     
@@ -35,7 +36,16 @@ class ChangeUsername: UIViewController{
     }
     
     @IBAction func updateUsername(sender: AnyObject) {
-        
+        if (newUsernameTB.text! == confirmUsernameTB.text!){
+            let data = ["username":newUsernameTB.text!]
+            CURRENT_USER.updateChildValues(data)
+        }
+        else{
+            let alert = UIAlertController(title: "Error", message: "Usernames don't match.", preferredStyle: UIAlertControllerStyle.Alert)
+            let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+            alert.addAction(action)
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
     }
     
 }
