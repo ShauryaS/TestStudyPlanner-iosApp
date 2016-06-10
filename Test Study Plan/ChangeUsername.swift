@@ -36,12 +36,21 @@ class ChangeUsername: UIViewController{
     }
     
     @IBAction func updateUsername(sender: AnyObject) {
-        if (newUsernameTB.text! == confirmUsernameTB.text!){
-            let data = ["username":newUsernameTB.text!]
-            CURRENT_USER.updateChildValues(data)
+        if(newUsernameTB.text! != "" && confirmUsernameTB.text! != ""){
+            if (newUsernameTB.text! == confirmUsernameTB.text!){
+                let data = ["username":newUsernameTB.text!]
+                CURRENT_USER.updateChildValues(data)
+                self.performSegueWithIdentifier("userToPlans", sender: nil)
+            }
+            else{
+                let alert = UIAlertController(title: "Username Update Failed.", message: "Usernames don't match.", preferredStyle: UIAlertControllerStyle.Alert)
+                let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+                alert.addAction(action)
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
         }
         else{
-            let alert = UIAlertController(title: "Error", message: "Usernames don't match.", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Username Update Failed.", message: "Fill Textfields To Change Username.", preferredStyle: UIAlertControllerStyle.Alert)
             let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
             alert.addAction(action)
             self.presentViewController(alert, animated: true, completion: nil)

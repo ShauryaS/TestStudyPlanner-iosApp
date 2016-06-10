@@ -192,7 +192,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvq-i6-VI2">
-                                <rect key="frame" x="20" y="79" width="374" height="30"/>
+                                <rect key="frame" x="20" y="82" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Change Username">
                                     <color key="titleColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
@@ -205,7 +205,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vJ-8B-uuK">
-                                <rect key="frame" x="20" y="138" width="374" height="30"/>
+                                <rect key="frame" x="20" y="203" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Change Password">
                                     <color key="titleColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
@@ -214,6 +214,19 @@
                                     <segue destination="Z34-W2-hm0" kind="show" identifier="changePasswordSegue" id="3tr-g3-6il">
                                         <segue key="commit" inheritsFrom="parent" id="jB5-VE-MrI"/>
                                         <segue key="preview" inheritsFrom="commit" id="dRa-SQ-gfp"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53S-gO-kjV">
+                                <rect key="frame" x="20" y="142" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Change Email">
+                                    <color key="titleColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hMy-zj-9CC" kind="show" id="usb-mG-VLe">
+                                        <segue key="commit" inheritsFrom="parent" id="kSr-kD-twH"/>
+                                        <segue key="preview" inheritsFrom="commit" id="Fvg-Nm-7iU"/>
                                     </segue>
                                 </connections>
                             </button>
@@ -241,12 +254,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fr7-Qe-rCj">
-                                <rect key="frame" x="20" y="203" width="374" height="30"/>
+                                <rect key="frame" x="20" y="153" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ne8-xK-Je3">
-                                <rect key="frame" x="20" y="266" width="374" height="30"/>
+                                <rect key="frame" x="20" y="239" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Save New Username">
                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -254,21 +267,12 @@
                                 </state>
                                 <connections>
                                     <action selector="updateUsername:" destination="MBE-2n-Lvw" eventType="touchUpInside" id="uOv-g1-yi6"/>
-                                    <segue destination="eA8-TW-SKv" kind="show" identifier="backToMainFromUsernameSegue" id="gAf-Xn-6mm">
-                                        <segue key="commit" inheritsFrom="parent" id="Qeb-1d-jGj"/>
-                                        <segue key="preview" inheritsFrom="commit" id="Doh-Ir-LEI"/>
-                                    </segue>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XL0-cf-iyB">
-                                <rect key="frame" x="20" y="142" width="374" height="30"/>
+                                <rect key="frame" x="20" y="90" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Old Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pwm-iX-Upe">
-                                <rect key="frame" x="20" y="82" width="374" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -277,7 +281,7 @@
                     <connections>
                         <outlet property="confirmUsernameTB" destination="fr7-Qe-rCj" id="z1A-YJ-yxA"/>
                         <outlet property="newUsernameTB" destination="XL0-cf-iyB" id="UEk-yj-7MG"/>
-                        <outlet property="oldUsernameTB" destination="Pwm-iX-Upe" id="yEe-5M-35o"/>
+                        <segue destination="eA8-TW-SKv" kind="show" identifier="userToPlans" id="Unm-5X-QfQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6SB-43-r3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -385,42 +389,109 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Old Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nQo-mL-iX0">
-                                <rect key="frame" x="20" y="78" width="374" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xe6-P3-DMv">
-                                <rect key="frame" x="20" y="139" width="374" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zS-6E-cq8">
-                                <rect key="frame" x="20" y="271" width="374" height="30"/>
+                                <rect key="frame" x="20" y="344" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Save New Password">
                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="eA8-TW-SKv" kind="show" identifier="backToMainFromPasswordSegue" id="e0X-dd-WUJ">
-                                        <segue key="commit" inheritsFrom="parent" id="5SB-4A-sHM"/>
-                                        <segue key="preview" inheritsFrom="commit" id="wVp-Az-7vy"/>
-                                    </segue>
+                                    <action selector="changePassword:" destination="Z34-W2-hm0" eventType="touchUpInside" id="cwx-hK-6UC"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FGF-ep-wEV">
-                                <rect key="frame" x="20" y="204" width="374" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FGF-ep-wEV">
+                                <rect key="frame" x="20" y="211" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nxg-gd-7Rc">
+                                <rect key="frame" x="20" y="275" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nQo-mL-iX0">
+                                <rect key="frame" x="20" y="87" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" keyboardAppearance="alert"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Old Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xe6-P3-DMv">
+                                <rect key="frame" x="20" y="148" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert" secureTextEntry="YES"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="confirmPassBox" destination="nxg-gd-7Rc" id="0Mv-9P-wFv"/>
+                        <outlet property="emailBox" destination="nQo-mL-iX0" id="EUS-KE-9aj"/>
+                        <outlet property="newPassBox" destination="FGF-ep-wEV" id="mK3-4z-uuR"/>
+                        <outlet property="oldPassBox" destination="Xe6-P3-DMv" id="utN-71-dCU"/>
+                        <segue destination="eA8-TW-SKv" kind="show" identifier="backToMainFromPasswordSegue" id="IrA-Hf-dCy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xfd-rj-lf8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="966" y="2887"/>
+        </scene>
+        <!--Change Email-->
+        <scene sceneID="jf9-Ph-gah">
+            <objects>
+                <viewController id="hMy-zj-9CC" customClass="ChangeEmail" customModule="Test_Study_Plan" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YXZ-Nk-n24"/>
+                        <viewControllerLayoutGuide type="bottom" id="XJ2-jP-heM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qTH-wT-am4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="szf-Ru-XzD">
+                                <rect key="frame" x="20" y="86" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" keyboardAppearance="alert"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n6G-IA-7CR">
+                                <rect key="frame" x="20" y="150" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b1i-5n-x7N">
+                                <rect key="frame" x="20" y="214" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" keyboardAppearance="alert"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyk-VF-c75">
+                                <rect key="frame" x="20" y="348" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Save Email">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeEmail:" destination="hMy-zj-9CC" eventType="touchUpInside" id="B37-t6-qJB"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S00-c6-PBB">
+                                <rect key="frame" x="20" y="275" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" keyboardAppearance="alert"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.02755308523774147" green="0.018976883962750435" blue="0.052015349268913269" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="conEmailBox" destination="S00-c6-PBB" id="jDQ-0R-0UV"/>
+                        <outlet property="emailBox" destination="szf-Ru-XzD" id="TdP-Vl-CVZ"/>
+                        <outlet property="newEmailBox" destination="b1i-5n-x7N" id="QrD-Fo-ekq"/>
+                        <outlet property="passBox" destination="n6G-IA-7CR" id="yDW-c3-JqQ"/>
+                        <segue destination="eA8-TW-SKv" kind="show" identifier="backToMainFromEmailSegue" id="eUV-Hr-BAR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dmJ-Fr-MWN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1591" y="2887"/>
         </scene>
         <!--Create Account View Controller-->
         <scene sceneID="luU-6f-W19">
@@ -511,9 +582,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gAf-Xn-6mm"/>
-        <segue reference="ceg-7H-aaf"/>
+        <segue reference="eUV-Hr-BAR"/>
+        <segue reference="usb-mG-VLe"/>
         <segue reference="3tr-g3-6il"/>
+        <segue reference="hAp-Hl-JHl"/>
         <segue reference="p8B-ci-Voe"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

@@ -19,6 +19,7 @@
 		497B95B71CC4820500C2282A /* PlanInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497B95B61CC4820500C2282A /* PlanInformation.swift */; };
 		49A1DC851C968298005C1FDF /* PlansView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A1DC841C968298005C1FDF /* PlansView.swift */; };
 		49A1DC871C96A1F2005C1FDF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A1DC861C96A1F2005C1FDF /* SettingsView.swift */; };
+		49CA90301D0A92A3006C351A /* ChangeEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CA902F1D0A92A3006C351A /* ChangeEmail.swift */; };
 		49F185331C8FE8C400E7032F /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F185321C8FE8C400E7032F /* BaseService.swift */; };
 		49F185351C900FC800E7032F /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F185341C900FC800E7032F /* LogInViewController.swift */; };
 		49F185371C900FE300E7032F /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F185361C900FE300E7032F /* CreateAccountViewController.swift */; };
@@ -62,6 +63,7 @@
 		497B95B61CC4820500C2282A /* PlanInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanInformation.swift; sourceTree = "<group>"; };
 		49A1DC841C968298005C1FDF /* PlansView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlansView.swift; sourceTree = "<group>"; };
 		49A1DC861C96A1F2005C1FDF /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		49CA902F1D0A92A3006C351A /* ChangeEmail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeEmail.swift; sourceTree = "<group>"; };
 		49F185321C8FE8C400E7032F /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		49F185341C900FC800E7032F /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		49F185361C900FE300E7032F /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				4948D3F41CBB8B9900334ADD /* ChangePassword.swift */,
 				493AA4661CBCC83100FED135 /* ChangeUsername.swift */,
 				497B95B61CC4820500C2282A /* PlanInformation.swift */,
+				49CA902F1D0A92A3006C351A /* ChangeEmail.swift */,
 			);
 			path = "Test Study Plan";
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				493AA4671CBCC83100FED135 /* ChangeUsername.swift in Sources */,
 				4910F3731C8EB7330029BBEA /* AppDelegate.swift in Sources */,
 				491FD8081C97C6A3009BFC4F /* AddPlanView.swift in Sources */,
+				49CA90301D0A92A3006C351A /* ChangeEmail.swift in Sources */,
 				497B95B71CC4820500C2282A /* PlanInformation.swift in Sources */,
 				49A1DC851C968298005C1FDF /* PlansView.swift in Sources */,
 				49A1DC871C96A1F2005C1FDF /* SettingsView.swift in Sources */,

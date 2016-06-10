@@ -33,10 +33,10 @@ class PlanInformation: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
-    func showPlan(){
+    func showPlan(){//error when storing data when assignments hit > 10
         CURRENT_USER.childByAppendingPath("plans").childByAppendingPath(planName).childByAppendingPath("time").queryOrderedByKey().observeEventType(.Value, withBlock: {snapshot in
             for t in snapshot.children.allObjects as! [FDataSnapshot] {
-                let label = UILabel(frame: CGRectMake(0,5+(CGFloat(self.i)-3)*25,374,25))
+                let label = UILabel(frame: CGRectMake(0,5+(CGFloat(self.i)-2)*25,374,25))
                 var tl = "Time to Study for Section "+String(self.i+1)
                 tl = tl + ": "+(t.value.stringValue)+" minutes"
                 label.text = tl
