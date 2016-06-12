@@ -181,7 +181,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZE-CG-rly">
-                                <rect key="frame" x="0.0" y="657" width="414" height="30"/>
+                                <rect key="frame" x="0.0" y="389" width="414" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Log Out">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -227,6 +227,19 @@
                                     <segue destination="hMy-zj-9CC" kind="show" id="usb-mG-VLe">
                                         <segue key="commit" inheritsFrom="parent" id="kSr-kD-twH"/>
                                         <segue key="preview" inheritsFrom="commit" id="Fvg-Nm-7iU"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OV8-4m-Brt">
+                                <rect key="frame" x="0.0" y="686" width="414" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Delete User">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="kWx-sH-aEK" kind="show" id="jUq-W7-cgJ">
+                                        <segue key="commit" inheritsFrom="parent" id="553-7u-N26"/>
+                                        <segue key="preview" inheritsFrom="commit" id="mya-7D-z3f"/>
                                     </segue>
                                 </connections>
                             </button>
@@ -493,6 +506,50 @@
             </objects>
             <point key="canvasLocation" x="1591" y="2887"/>
         </scene>
+        <!--Delete User-->
+        <scene sceneID="6NQ-Ta-4yA">
+            <objects>
+                <viewController id="kWx-sH-aEK" customClass="DeleteUser" customModule="Test_Study_Plan" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G1z-bF-iua"/>
+                        <viewControllerLayoutGuide type="bottom" id="DbJ-lS-Oex"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5i6-Vh-mSW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="89J-Ej-NmY">
+                                <rect key="frame" x="20" y="87" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" keyboardAppearance="alert"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dCR-Jn-vBC">
+                                <rect key="frame" x="20" y="151" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WB7-Mn-ylH">
+                                <rect key="frame" x="20" y="220" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Delete User"/>
+                                <connections>
+                                    <action selector="deleteUser:" destination="kWx-sH-aEK" eventType="touchUpInside" id="pIa-Z8-Sxe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="emailBox" destination="89J-Ej-NmY" id="TmC-Nd-E0Z"/>
+                        <outlet property="passBox" destination="dCR-Jn-vBC" id="oJ6-4k-HT1"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="backToMainFromDeleteSegue" id="yzR-aO-sDn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bA2-Uz-kPD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2201" y="2887"/>
+        </scene>
         <!--Create Account View Controller-->
         <scene sceneID="luU-6f-W19">
             <objects>
@@ -584,8 +641,10 @@
     <inferredMetricsTieBreakers>
         <segue reference="eUV-Hr-BAR"/>
         <segue reference="usb-mG-VLe"/>
-        <segue reference="3tr-g3-6il"/>
         <segue reference="hAp-Hl-JHl"/>
+        <segue reference="3tr-g3-6il"/>
+        <segue reference="jUq-W7-cgJ"/>
+        <segue reference="yzR-aO-sDn"/>
         <segue reference="p8B-ci-Voe"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

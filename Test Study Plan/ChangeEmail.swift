@@ -40,21 +40,21 @@ class ChangeEmail: UIViewController{
     @IBAction func changeEmail(sender: AnyObject) {
         if (emailBox.text! != "" &&  passBox.text! != "" && newEmailBox.text! != "" && conEmailBox.text! != ""){
             if(newEmailBox.text! == conEmailBox.text!){
-         FIREBASE_REF.changeEmailForUser(emailBox.text!, password: passBox.text!,
-         toNewEmail: newEmailBox.text!, withCompletionBlock: { error in
-                    if error != nil{
-                        let alert = UIAlertController(title: "Email Update Failed", message: "Email and/or Password Don't Match.", preferredStyle: UIAlertControllerStyle.Alert)
-                        let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
-                        alert.addAction(action)
-                        self.presentViewController(alert, animated: true, completion: nil)
-                    }
-                    else{
-                        self.performSegueWithIdentifier("backToMainFromEmailSegue", sender: nil)
-                    }
+                FIREBASE_REF.changeEmailForUser(emailBox.text!, password: passBox.text!, toNewEmail: newEmailBox.text!,
+                    withCompletionBlock: { error in
+                        if error != nil{
+                            let alert = UIAlertController(title: "Email Update Failed", message: "Email and/or Password Don't Match.", preferredStyle: UIAlertControllerStyle.Alert)
+                            let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+                            alert.addAction(action)
+                            self.presentViewController(alert, animated: true, completion: nil)
+                        }
+                        else{
+                            self.performSegueWithIdentifier("backToMainFromEmailSegue", sender: nil)
+                        }
                 })
             }
             else{
-                let alert = UIAlertController(title: "Email Update Failed", message: "New Emails Don't Match.", preferredStyle: UIAlertControllerStyle.Alert)
+                let alert = UIAlertController(title: "Email Update Failed", message: "New Emails Don't Match.", preferredStyle:    UIAlertControllerStyle.Alert)
                 let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
                 alert.addAction(action)
                 self.presentViewController(alert, animated: true, completion: nil)

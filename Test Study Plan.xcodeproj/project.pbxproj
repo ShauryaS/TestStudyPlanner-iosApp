@@ -23,6 +23,7 @@
 		49F185331C8FE8C400E7032F /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F185321C8FE8C400E7032F /* BaseService.swift */; };
 		49F185351C900FC800E7032F /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F185341C900FC800E7032F /* LogInViewController.swift */; };
 		49F185371C900FE300E7032F /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F185361C900FE300E7032F /* CreateAccountViewController.swift */; };
+		49F69ACD1D0D22800028B4FB /* DeleteUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F69ACC1D0D22800028B4FB /* DeleteUser.swift */; };
 		A69A0E61CFEE7F4C80656E9F /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7579266465031E8DDC790A0 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		49F185321C8FE8C400E7032F /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		49F185341C900FC800E7032F /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		49F185361C900FE300E7032F /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		49F69ACC1D0D22800028B4FB /* DeleteUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteUser.swift; sourceTree = "<group>"; };
 		A27B2982A971727CFBD59A47 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B7579266465031E8DDC790A0 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -154,6 +156,7 @@
 				493AA4661CBCC83100FED135 /* ChangeUsername.swift */,
 				497B95B61CC4820500C2282A /* PlanInformation.swift */,
 				49CA902F1D0A92A3006C351A /* ChangeEmail.swift */,
+				49F69ACC1D0D22800028B4FB /* DeleteUser.swift */,
 			);
 			path = "Test Study Plan";
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				497B95B71CC4820500C2282A /* PlanInformation.swift in Sources */,
 				49A1DC851C968298005C1FDF /* PlansView.swift in Sources */,
 				49A1DC871C96A1F2005C1FDF /* SettingsView.swift in Sources */,
+				49F69ACD1D0D22800028B4FB /* DeleteUser.swift in Sources */,
 				49F185331C8FE8C400E7032F /* BaseService.swift in Sources */,
 				49F185351C900FC800E7032F /* LogInViewController.swift in Sources */,
 			);
