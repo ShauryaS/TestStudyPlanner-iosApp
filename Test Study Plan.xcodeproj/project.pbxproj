@@ -15,6 +15,7 @@
 		4910F3931C8EB7340029BBEA /* Test_Study_PlanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4910F3921C8EB7340029BBEA /* Test_Study_PlanUITests.swift */; };
 		491FD8081C97C6A3009BFC4F /* AddPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491FD8071C97C6A3009BFC4F /* AddPlanView.swift */; };
 		493AA4671CBCC83100FED135 /* ChangeUsername.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AA4661CBCC83100FED135 /* ChangeUsername.swift */; };
+		493C603C1D0D541700FAC427 /* HRToast+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493C603B1D0D541700FAC427 /* HRToast+UIView.swift */; };
 		4948D3F51CBB8B9900334ADD /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4948D3F41CBB8B9900334ADD /* ChangePassword.swift */; };
 		497B95B71CC4820500C2282A /* PlanInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497B95B61CC4820500C2282A /* PlanInformation.swift */; };
 		49A1DC851C968298005C1FDF /* PlansView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A1DC841C968298005C1FDF /* PlansView.swift */; };
@@ -60,6 +61,7 @@
 		4910F3941C8EB7340029BBEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		491FD8071C97C6A3009BFC4F /* AddPlanView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlanView.swift; sourceTree = "<group>"; };
 		493AA4661CBCC83100FED135 /* ChangeUsername.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeUsername.swift; sourceTree = "<group>"; };
+		493C603B1D0D541700FAC427 /* HRToast+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HRToast+UIView.swift"; sourceTree = "<group>"; };
 		4948D3F41CBB8B9900334ADD /* ChangePassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
 		497B95B61CC4820500C2282A /* PlanInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanInformation.swift; sourceTree = "<group>"; };
 		49A1DC841C968298005C1FDF /* PlansView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlansView.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				4910F37E1C8EB7340029BBEA /* Info.plist */,
 				49F185341C900FC800E7032F /* LogInViewController.swift */,
 				49F185361C900FE300E7032F /* CreateAccountViewController.swift */,
+				493C603B1D0D541700FAC427 /* HRToast+UIView.swift */,
 				49A1DC841C968298005C1FDF /* PlansView.swift */,
 				49A1DC861C96A1F2005C1FDF /* SettingsView.swift */,
 				491FD8071C97C6A3009BFC4F /* AddPlanView.swift */,
@@ -370,6 +373,7 @@
 				4910F3731C8EB7330029BBEA /* AppDelegate.swift in Sources */,
 				491FD8081C97C6A3009BFC4F /* AddPlanView.swift in Sources */,
 				49CA90301D0A92A3006C351A /* ChangeEmail.swift in Sources */,
+				493C603C1D0D541700FAC427 /* HRToast+UIView.swift in Sources */,
 				497B95B71CC4820500C2282A /* PlanInformation.swift in Sources */,
 				49A1DC851C968298005C1FDF /* PlansView.swift in Sources */,
 				49A1DC871C96A1F2005C1FDF /* SettingsView.swift in Sources */,
@@ -524,7 +528,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shauryas.Test-Study-Plan";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -539,7 +543,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shauryas.Test-Study-Plan";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
