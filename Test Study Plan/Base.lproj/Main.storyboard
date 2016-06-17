@@ -19,18 +19,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NI7-hd-ruD">
-                                <rect key="frame" x="20" y="293" width="560" height="30"/>
+                                <rect key="frame" x="20" y="249" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Study Plan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vME-hY-PMm">
-                                <rect key="frame" x="20" y="108" width="560" height="47"/>
+                                <rect key="frame" x="20" y="64" width="560" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="39"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N75-6B-y1S">
-                                <rect key="frame" x="20" y="363" width="560" height="36"/>
+                                <rect key="frame" x="20" y="319" width="560" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -40,7 +40,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BlK-kf-W6Z">
-                                <rect key="frame" x="20" y="431" width="560" height="36"/>
+                                <rect key="frame" x="20" y="387" width="560" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -53,7 +53,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i7U-sQ-veJ">
-                                <rect key="frame" x="20" y="230" width="560" height="30"/>
+                                <rect key="frame" x="20" y="186" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert"/>
                             </textField>
@@ -173,7 +173,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pyj-fV-km7">
                                 <rect key="frame" x="20" y="119" width="560" height="481"/>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnT-Td-Z9s">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnT-Td-Z9s">
                                 <rect key="frame" x="20" y="64" width="560" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -182,14 +182,24 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="pyj-fV-km7" firstAttribute="top" secondItem="Dcv-RB-2Zv" secondAttribute="bottom" constant="55" id="27d-dt-V88"/>
                             <constraint firstItem="pyj-fV-km7" firstAttribute="leading" secondItem="hFp-tg-eIQ" secondAttribute="leadingMargin" id="HMW-HG-Tky"/>
                             <constraint firstItem="pyj-fV-km7" firstAttribute="top" secondItem="jnT-Td-Z9s" secondAttribute="bottom" constant="55" id="Vlw-pB-LHs"/>
                             <constraint firstItem="jnT-Td-Z9s" firstAttribute="leading" secondItem="hFp-tg-eIQ" secondAttribute="leadingMargin" id="XRQ-M5-Dcn"/>
                             <constraint firstItem="n7o-Xu-zla" firstAttribute="top" secondItem="pyj-fV-km7" secondAttribute="bottom" id="g5q-iE-myO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pyj-fV-km7" secondAttribute="trailing" id="gJ7-d0-go5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jnT-Td-Z9s" secondAttribute="trailing" id="gtg-FO-YPZ"/>
+                            <constraint firstItem="pyj-fV-km7" firstAttribute="top" secondItem="Dcv-RB-2Zv" secondAttribute="bottom" constant="25" id="lAn-VH-72f"/>
+                            <constraint firstItem="jnT-Td-Z9s" firstAttribute="top" secondItem="Dcv-RB-2Zv" secondAttribute="bottom" id="lXj-Tb-4EP"/>
                             <constraint firstItem="jnT-Td-Z9s" firstAttribute="top" secondItem="Dcv-RB-2Zv" secondAttribute="bottom" id="nHb-Cm-661"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="nHb-Cm-661"/>
+                                <exclude reference="Vlw-pB-LHs"/>
+                                <exclude reference="lAn-VH-72f"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="planInfoDisp" destination="pyj-fV-km7" id="Yh1-9F-PYV"/>
@@ -213,7 +223,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvq-i6-VI2">
-                                <rect key="frame" x="20" y="82" width="560" height="36"/>
+                                <rect key="frame" x="20" y="94" width="560" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Change Username">
                                     <color key="titleColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
@@ -225,21 +235,8 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vJ-8B-uuK">
-                                <rect key="frame" x="20" y="215" width="560" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Change Password">
-                                    <color key="titleColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Z34-W2-hm0" kind="show" identifier="changePasswordSegue" id="3tr-g3-6il">
-                                        <segue key="commit" inheritsFrom="parent" id="jB5-VE-MrI"/>
-                                        <segue key="preview" inheritsFrom="commit" id="dRa-SQ-gfp"/>
-                                    </segue>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53S-gO-kjV">
-                                <rect key="frame" x="20" y="148" width="560" height="36"/>
+                                <rect key="frame" x="20" y="160" width="560" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Change Email">
                                     <color key="titleColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
@@ -275,25 +272,39 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="2XP-7f-s4a"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vJ-8B-uuK">
+                                <rect key="frame" x="20" y="226" width="560" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Change Password">
+                                    <color key="titleColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Z34-W2-hm0" kind="show" identifier="changePasswordSegue" id="3tr-g3-6il">
+                                        <segue key="commit" inheritsFrom="parent" id="jB5-VE-MrI"/>
+                                        <segue key="preview" inheritsFrom="commit" id="dRa-SQ-gfp"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="uvq-i6-VI2" firstAttribute="top" secondItem="zsa-ie-Fy3" secondAttribute="bottom" constant="18" id="7af-nn-l9L"/>
-                            <constraint firstItem="OV8-4m-Brt" firstAttribute="top" secondItem="ZZE-CG-rly" secondAttribute="bottom" constant="120" id="BFZ-KY-faV"/>
-                            <constraint firstItem="ZZE-CG-rly" firstAttribute="top" secondItem="2vJ-8B-uuK" secondAttribute="bottom" constant="124" id="EOQ-jy-iiz"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZZE-CG-rly" secondAttribute="trailing" id="KiN-5u-vdf"/>
-                            <constraint firstItem="53S-gO-kjV" firstAttribute="leading" secondItem="F4e-pG-cXT" secondAttribute="leadingMargin" id="LMr-WE-hE0"/>
-                            <constraint firstItem="2vJ-8B-uuK" firstAttribute="top" secondItem="53S-gO-kjV" secondAttribute="bottom" constant="31" id="M16-up-dPb"/>
-                            <constraint firstItem="ZZE-CG-rly" firstAttribute="leading" secondItem="F4e-pG-cXT" secondAttribute="leadingMargin" id="ND8-aY-87D"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="53S-gO-kjV" secondAttribute="trailing" id="RXt-RN-kDw"/>
-                            <constraint firstItem="53S-gO-kjV" firstAttribute="top" secondItem="uvq-i6-VI2" secondAttribute="bottom" constant="30" id="RdU-Bu-FfQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uvq-i6-VI2" secondAttribute="trailing" id="WvI-8x-cpA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="OV8-4m-Brt" secondAttribute="trailing" id="cg5-Cy-wia"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="2vJ-8B-uuK" secondAttribute="trailing" id="gdE-Ts-C0G"/>
-                            <constraint firstItem="2vJ-8B-uuK" firstAttribute="leading" secondItem="F4e-pG-cXT" secondAttribute="leadingMargin" id="guD-MA-FJ1"/>
-                            <constraint firstItem="OV8-4m-Brt" firstAttribute="leading" secondItem="F4e-pG-cXT" secondAttribute="leadingMargin" id="hdL-KT-uWt"/>
-                            <constraint firstItem="uvq-i6-VI2" firstAttribute="leading" secondItem="F4e-pG-cXT" secondAttribute="leadingMargin" id="wUA-H2-W5J"/>
+                            <constraint firstItem="hv6-fd-bic" firstAttribute="top" secondItem="OV8-4m-Brt" secondAttribute="bottom" constant="33" id="6aX-db-ha8"/>
+                            <constraint firstAttribute="bottom" secondItem="ZZE-CG-rly" secondAttribute="bottom" constant="189" id="7jB-Q4-G81"/>
+                            <constraint firstItem="2vJ-8B-uuK" firstAttribute="top" secondItem="53S-gO-kjV" secondAttribute="bottom" constant="30" id="A6c-7e-ifw"/>
+                            <constraint firstItem="uvq-i6-VI2" firstAttribute="top" secondItem="zsa-ie-Fy3" secondAttribute="bottom" constant="30" id="D1R-S0-sWw"/>
+                            <constraint firstItem="53S-gO-kjV" firstAttribute="trailing" secondItem="F4e-pG-cXT" secondAttribute="trailingMargin" id="Dkg-fj-ibr"/>
+                            <constraint firstItem="uvq-i6-VI2" firstAttribute="leading" secondItem="F4e-pG-cXT" secondAttribute="leadingMargin" id="EmL-av-Y3O"/>
+                            <constraint firstItem="53S-gO-kjV" firstAttribute="trailing" secondItem="ZZE-CG-rly" secondAttribute="trailing" id="Pr3-Ws-6uU"/>
+                            <constraint firstItem="53S-gO-kjV" firstAttribute="trailing" secondItem="2vJ-8B-uuK" secondAttribute="trailing" id="Qec-8W-B5h"/>
+                            <constraint firstItem="53S-gO-kjV" firstAttribute="leading" secondItem="F4e-pG-cXT" secondAttribute="leadingMargin" id="Ro8-n2-C6i"/>
+                            <constraint firstItem="53S-gO-kjV" firstAttribute="leading" secondItem="OV8-4m-Brt" secondAttribute="leading" id="bOX-ao-Bh4"/>
+                            <constraint firstItem="uvq-i6-VI2" firstAttribute="trailing" secondItem="F4e-pG-cXT" secondAttribute="trailingMargin" id="bXk-lx-NjT"/>
+                            <constraint firstItem="53S-gO-kjV" firstAttribute="leading" secondItem="2vJ-8B-uuK" secondAttribute="leading" id="quf-zr-fA1"/>
+                            <constraint firstItem="53S-gO-kjV" firstAttribute="trailing" secondItem="OV8-4m-Brt" secondAttribute="trailing" id="uSN-dJ-Mk2"/>
+                            <constraint firstItem="53S-gO-kjV" firstAttribute="leading" secondItem="ZZE-CG-rly" secondAttribute="leading" id="uqp-uE-Zhv"/>
+                            <constraint firstItem="ZZE-CG-rly" firstAttribute="top" secondItem="2vJ-8B-uuK" secondAttribute="bottom" priority="250" constant="113" id="x9U-Cc-psg"/>
+                            <constraint firstItem="53S-gO-kjV" firstAttribute="top" secondItem="uvq-i6-VI2" secondAttribute="bottom" constant="30" id="xxU-mp-mUk"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -766,12 +777,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="2XP-7f-s4a"/>
+        <segue reference="v8c-Sc-fbl"/>
         <segue reference="usb-mG-VLe"/>
-        <segue reference="Unm-5X-QfQ"/>
+        <segue reference="3tr-g3-6il"/>
         <segue reference="hAp-Hl-JHl"/>
         <segue reference="jUq-W7-cgJ"/>
-        <segue reference="3tr-g3-6il"/>
-        <segue reference="yzR-aO-sDn"/>
         <segue reference="p8B-ci-Voe"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

@@ -36,11 +36,11 @@ class PlanInformation: UIViewController{
     func showPlan(){//error when storing data when assignments hit > 10
         CURRENT_USER.childByAppendingPath("plans").childByAppendingPath(planName).childByAppendingPath("time").queryOrderedByKey().observeEventType(.Value, withBlock: {snapshot in
             for t in snapshot.children.allObjects as! [FDataSnapshot] {
-                let label = UILabel(frame: CGRectMake(0,5+(CGFloat(self.i)-2)*25,374,25))
+                let label = UILabel(frame: CGRectMake(0,5+(CGFloat(self.i)-3)*25,374,25))
                 var tl = "Time to Study for Section "+String(self.i+1)
                 tl = tl + ": "+(t.value.stringValue)+" minutes"
                 label.text = tl
-                label.font = label.font.fontWithSize(20)
+                label.font = label.font.fontWithSize(15)
                 label.textColor = UIColor.whiteColor()
                 self.planInfoDisp.addSubview(label)
                 if (5+CGFloat(self.i))*25>self.planInfoDisp.contentSize.height{
