@@ -16,6 +16,7 @@ class PlansView: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.makeToast(message: "Logged In", duration: 3.0, position: HRToastPositionDefault, title: "Status")
         let nav = self.navigationController?.navigationBar
         nav?.barStyle = UIBarStyle.Black
         nav?.tintColor = UIColor.redColor()

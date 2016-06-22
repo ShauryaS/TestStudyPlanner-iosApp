@@ -47,6 +47,7 @@ class ChangePassword: UIViewController{
                         self.presentViewController(alert, animated: true, completion: nil)
                     }
                     else{
+                        self.view.makeToast(message: "Password Changed", duration: 2.0, position: HRToastPositionDefault, title: "Password")
                         self.performSegueWithIdentifier("backToMainFromPasswordSegue", sender: nil)
                     }
                 })

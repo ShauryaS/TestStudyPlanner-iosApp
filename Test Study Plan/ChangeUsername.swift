@@ -40,6 +40,7 @@ class ChangeUsername: UIViewController{
             if (newUsernameTB.text! == confirmUsernameTB.text!){
                 let data = ["username":newUsernameTB.text!]
                 CURRENT_USER.updateChildValues(data)
+                self.view.makeToast(message: "Username Changed", duration: 2.0, position: HRToastPositionDefault, title: "Username")
                 self.performSegueWithIdentifier("userToPlans", sender: nil)
             }
             else{

@@ -52,13 +52,13 @@ class CreateAccountViewController: UIViewController {
                             NSUserDefaults.standardUserDefaults().synchronize()
                             let data = ["username": username]
                             FIREBASE_REF.childByAppendingPath("users").childByAppendingPath(authData.uid).setValue(data)
+                            self.view.makeToast(message: "Account Created", duration: 2.0, position: HRToastPositionDefault, title: "Account Status")
                             self.dismissViewControllerAnimated(true,completion: nil)
-                            print("Account Created :)")
                             self.dismissViewControllerAnimated(true,completion: nil)
                         }
                         else
                         {
-                            print(error)
+                            self.view.makeToast(message: "Account Failed to be Created", duration: 2.0, position: HRToastPositionDefault, title: "Account Status")
                         }
                     })
                 }
