@@ -49,7 +49,6 @@ class ChangeEmail: UIViewController{
                             self.presentViewController(alert, animated: true, completion: nil)
                         }
                         else{
-                            self.view.makeToast(message: "Email Changed", duration: 2.0, position: HRToastPositionDefault, title: "Email")
                             self.performSegueWithIdentifier("backToMainFromEmailSegue", sender: nil)
                         }
                 })

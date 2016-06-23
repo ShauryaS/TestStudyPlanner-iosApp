@@ -45,7 +45,6 @@ class DeleteUser: UIViewController{
                     self.presentViewController(alert, animated: true, completion: nil)
                 }
                 else {
-                    self.view.makeToast(message: "User Deleted", duration: 2.0, position: HRToastPositionDefault, title: "Deleted")
                     CURRENT_USER.unauth()
                     NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "uid")
                     self.performSegueWithIdentifier("backToMainFromDeleteSegue", sender: nil)
