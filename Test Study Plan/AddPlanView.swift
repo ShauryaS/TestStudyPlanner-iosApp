@@ -29,6 +29,24 @@ class AddPlansView: UIViewController{
         dispProbs.contentSize = CGSizeMake(374,25)
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AddPlansView.dismissKeyboard))
         view.addGestureRecognizer(tap)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AddPlansView.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AddPlansView.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
+        
+    }
+    
+    
+    func keyboardWillShow(notification: NSNotification) {
+        
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+            self.view.frame.origin.y -= keyboardSize.height
+        }
+        
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+            self.view.frame.origin.y += keyboardSize.height
+        }
     }
     
     //Calls this function when the tap is recognized.
