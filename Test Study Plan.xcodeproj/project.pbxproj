@@ -254,15 +254,18 @@
 					4910F36E1C8EB7330029BBEA = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = CC9N3SP5VS;
+						LastSwiftMigration = 0800;
 					};
 					4910F3821C8EB7340029BBEA = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = CC9N3SP5VS;
+						LastSwiftMigration = 0800;
 						TestTargetID = 4910F36E1C8EB7330029BBEA;
 					};
 					4910F38D1C8EB7340029BBEA = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = CC9N3SP5VS;
+						LastSwiftMigration = 0800;
 						TestTargetID = 4910F36E1C8EB7330029BBEA;
 					};
 				};
@@ -528,6 +531,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shauryas.Test-Study-Plan";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -543,6 +547,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shauryas.Test-Study-Plan";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -555,6 +560,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shauryas.Test-Study-PlanTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Test Study Plan.app/Test Study Plan";
 			};
 			name = Debug;
@@ -567,6 +573,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shauryas.Test-Study-PlanTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Test Study Plan.app/Test Study Plan";
 			};
 			name = Release;
@@ -578,6 +585,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shauryas.Test-Study-PlanUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Test Study Plan";
 			};
 			name = Debug;
@@ -589,6 +597,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shauryas.Test-Study-PlanUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Test Study Plan";
 			};
 			name = Release;

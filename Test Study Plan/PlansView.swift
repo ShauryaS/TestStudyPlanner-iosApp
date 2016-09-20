@@ -12,14 +12,14 @@ import Firebase
 class PlansView: UIViewController{
     
     @IBOutlet var plansList: UIScrollView!
-    private var i=0
+    fileprivate var i=0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let nav = self.navigationController?.navigationBar
-        nav?.barStyle = UIBarStyle.Black
-        nav?.tintColor = UIColor.redColor()
-        nav?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        nav?.barStyle = UIBarStyle.black
+        nav?.tintColor = UIColor.red
+        nav?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         navigationItem.title="List of Plans"
         plansList.contentSize.height = 40
         loadPlans()
@@ -33,13 +33,13 @@ class PlansView: UIViewController{
     
     func loadPlans(){
         print(CURRENT_USER)
-        CURRENT_USER.childByAppendingPath("plans").queryOrderedByKey().observeEventType(.ChildAdded, withBlock: {snapshot in
-            let button = UIButton(frame: CGRectMake(0,5+(CGFloat(self.i))*35,450,25))
-            button.titleLabel!.font = button.titleLabel!.font.fontWithSize(25)
-            button.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Left
-            button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-            button.setTitle(snapshot.key, forState: .Normal)
-            button.addTarget(self, action: #selector(PlansView.dispPlan(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        CURRENT_USER.child(byAppendingPath: "plans").queryOrderedByKey().observe(.childAdded, with: {snapshot in
+            let button = UIButton(frame: CGRect(x: 0,y: 5+(CGFloat(self.i))*35,width: 450,height: 25))
+            button.titleLabel!.font = button.titleLabel!.font.withSize(25)
+            button.contentHorizontalAlignment = UIControlContentHorizontalAlignment.left
+            button.setTitleColor(UIColor.white, for: UIControlState())
+            button.setTitle(snapshot?.key, for: UIControlState())
+            button.addTarget(self, action: #selector(PlansView.dispPlan(_:)), for: UIControlEvents.touchUpInside)
             self.plansList.addSubview(button)
             if (5+CGFloat(self.i)+1)*35>self.plansList.contentSize.height{
                 self.plansList.contentSize.height+=40
@@ -48,14 +48,14 @@ class PlansView: UIViewController{
         })
     }
     
-    func dispPlan(sender:UIButton!){
-        self.performSegueWithIdentifier("planInfoSegue", sender: sender)
+    func dispPlan(_ sender:UIButton!){
+        self.performSegue(withIdentifier: "planInfoSegue", sender: sender)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if "planInfoSegue"==segue.identifier{
-            let yourNextViewController = (segue.destinationViewController as! PlanInformation)
-            yourNextViewController.planName = (sender?.titleLabel!?.text!)!
+            let yourNextViewController = (segue.destination as! PlanInformation)
+            yourNextViewController.planName = ((sender as AnyObject).titleLabel!?.text!)!
         }
     }
     

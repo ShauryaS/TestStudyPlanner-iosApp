@@ -22,9 +22,9 @@ class SettingsView: UIViewController{
     }
     
     
-    @IBAction func logOut(sender: AnyObject) {
+    @IBAction func logOut(_ sender: AnyObject) {
         CURRENT_USER.unauth()
-        NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "uid")
+        UserDefaults.standard.setValue(nil, forKey: "uid")
     }
     
 }

@@ -37,34 +37,34 @@ class ChangeEmail: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func changeEmail(sender: AnyObject) {
+    @IBAction func changeEmail(_ sender: AnyObject) {
         if (emailBox.text! != "" &&  passBox.text! != "" && newEmailBox.text! != "" && conEmailBox.text! != ""){
             if(newEmailBox.text! == conEmailBox.text!){
-                FIREBASE_REF.changeEmailForUser(emailBox.text!, password: passBox.text!, toNewEmail: newEmailBox.text!,
+                FIREBASE_REF?.changeEmail(forUser: emailBox.text!, password: passBox.text!, toNewEmail: newEmailBox.text!,
                     withCompletionBlock: { error in
                         if error != nil{
-                            let alert = UIAlertController(title: "Email Update Failed", message: "Email and/or Password Don't Match.", preferredStyle: UIAlertControllerStyle.Alert)
-                            let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+                            let alert = UIAlertController(title: "Email Update Failed", message: "Email and/or Password Don't Match.", preferredStyle: UIAlertControllerStyle.alert)
+                            let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
                             alert.addAction(action)
-                            self.presentViewController(alert, animated: true, completion: nil)
+                            self.present(alert, animated: true, completion: nil)
                         }
                         else{
-                            self.performSegueWithIdentifier("backToMainFromEmailSegue", sender: nil)
+                            self.performSegue(withIdentifier: "backToMainFromEmailSegue", sender: nil)
                         }
                 })
             }
             else{
-                let alert = UIAlertController(title: "Email Update Failed", message: "New Emails Don't Match.", preferredStyle:    UIAlertControllerStyle.Alert)
-                let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+                let alert = UIAlertController(title: "Email Update Failed", message: "New Emails Don't Match.", preferredStyle:    UIAlertControllerStyle.alert)
+                let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
                 alert.addAction(action)
-                self.presentViewController(alert, animated: true, completion: nil)
+                self.present(alert, animated: true, completion: nil)
             }
         }
         else{
-            let alert = UIAlertController(title: "Email Update Failed", message: "Fill Textfields To Change Email.", preferredStyle: UIAlertControllerStyle.Alert)
-            let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+            let alert = UIAlertController(title: "Email Update Failed", message: "Fill Textfields To Change Email.", preferredStyle: UIAlertControllerStyle.alert)
+            let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
             alert.addAction(action)
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
         }
     }
     

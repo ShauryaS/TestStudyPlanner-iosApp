@@ -13,38 +13,38 @@ class AddPlansView: UIViewController{
     
     @IBOutlet var probWrong: UITextField!
     @IBOutlet var dispProbs: UIScrollView!
-    private var probsWrong = [Int]()
+    fileprivate var probsWrong = [Int]()
     @IBOutlet var nameTF: UITextField!
     @IBOutlet var dayTF: UITextField!
     @IBOutlet var hourTF: UITextField!
-    private var i=1
-    private var name = ""
-    private var days = 0
-    private var hrs = 0
-    private var timePerSec = [Int]()
+    fileprivate var i=1
+    fileprivate var name = ""
+    fileprivate var days = 0
+    fileprivate var hrs = 0
+    fileprivate var timePerSec = [Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title="Create Plan"
-        dispProbs.contentSize = CGSizeMake(374,25)
+        dispProbs.contentSize = CGSize(width: 374,height: 25)
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AddPlansView.dismissKeyboard))
         view.addGestureRecognizer(tap)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AddPlansView.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AddPlansView.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(AddPlansView.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(AddPlansView.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
     }
     
     
-    func keyboardWillShow(notification: NSNotification) {
+    func keyboardWillShow(_ notification: Notification) {
         
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+        if let keyboardSize = ((notification as NSNotification).userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             self.view.frame.origin.y -= keyboardSize.height
         }
         
     }
     
-    func keyboardWillHide(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+    func keyboardWillHide(_ notification: Notification) {
+        if let keyboardSize = ((notification as NSNotification).userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             self.view.frame.origin.y += keyboardSize.height
         }
     }
@@ -60,12 +60,12 @@ class AddPlansView: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func addHWProbWrong(sender: AnyObject) {
+    @IBAction func addHWProbWrong(_ sender: AnyObject) {
         probsWrong.append(Int(probWrong.text!)!)
-        let label = UILabel(frame: CGRectMake(0,(CGFloat(i)-1)*25,374,25))
+        let label = UILabel(frame: CGRect(x: 0,y: (CGFloat(i)-1)*25,width: 374,height: 25))
         label.text = "Problems wrong - HW#"+String(i)+": "+probWrong.text!
-        label.font = label.font.fontWithSize(20)
-        label.textColor = UIColor.whiteColor()
+        label.font = label.font.withSize(20)
+        label.textColor = UIColor.white
         dispProbs.addSubview(label)
         if (CGFloat(i))*25>dispProbs.contentSize.height{
             dispProbs.contentSize.height+=25
@@ -75,23 +75,23 @@ class AddPlansView: UIViewController{
         i=i+1
     }
     
-    @IBAction func addPlan(sender: AnyObject) {
+    @IBAction func addPlan(_ sender: AnyObject) {
         name = nameTF.text!
         days = Int(dayTF.text!)!
         hrs = Int(hourTF.text!)!
         calculate()
-        let ref = CURRENT_USER.childByAppendingPath("plans")
-        ref.updateChildValues([name: name])
-        let newRef = ref.childByAppendingPath(name).childByAppendingPath("time")
+        let ref = CURRENT_USER.child(byAppendingPath: "plans")
+        ref?.updateChildValues([name: name])
+        let newRef = ref?.child(byAppendingPath: name).child(byAppendingPath: "time")
         var count = 1;
         for i in timePerSec{
-            newRef.updateChildValues(["time "+String(count):i])
+            newRef?.updateChildValues(["time "+String(count):i])
             count = count+1
         }
     }
     
     func calculate(){
-        let sumOfProbsWrong = probsWrong.reduce(0, combine: +)
+        let sumOfProbsWrong = probsWrong.reduce(0, +)
         let propScale = (Double(hrs)*Double(days))/Double(sumOfProbsWrong)
         for i in probsWrong{
             let temp = Double(i)*propScale*60

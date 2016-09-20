@@ -35,19 +35,19 @@ class DeleteUser: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func deleteUser(sender: AnyObject) {
-        FIREBASE_REF.removeUser(emailBox.text!, password: passBox.text!,
+    @IBAction func deleteUser(_ sender: AnyObject) {
+        FIREBASE_REF?.removeUser(emailBox.text!, password: passBox.text!,
             withCompletionBlock: { error in
                 if error != nil {
-                    let alert = UIAlertController(title: "User Deletion Failed", message: "Email and/or Password Don't Match.", preferredStyle: UIAlertControllerStyle.Alert)
-                    let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+                    let alert = UIAlertController(title: "User Deletion Failed", message: "Email and/or Password Don't Match.", preferredStyle: UIAlertControllerStyle.alert)
+                    let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
                     alert.addAction(action)
-                    self.presentViewController(alert, animated: true, completion: nil)
+                    self.present(alert, animated: true, completion: nil)
                 }
                 else {
                     CURRENT_USER.unauth()
-                    NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "uid")
-                    self.performSegueWithIdentifier("backToMainFromDeleteSegue", sender: nil)
+                    UserDefaults.standard.setValue(nil, forKey: "uid")
+                    self.performSegue(withIdentifier: "backToMainFromDeleteSegue", sender: nil)
                 }
         })
     }

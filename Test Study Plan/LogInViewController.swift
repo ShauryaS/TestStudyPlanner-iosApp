@@ -17,10 +17,10 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
-        FIREBASE_REF.observeAuthEventWithBlock({ authData in
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
+        FIREBASE_REF?.observeAuthEvent({ authData in
             if authData != nil {
-                self.performSegueWithIdentifier("plansSegue", sender: nil)
+                self.performSegue(withIdentifier: "plansSegue", sender: nil)
             }
         })
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LogInViewController.dismissKeyboard))
@@ -38,33 +38,33 @@ class LogInViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func loginAction(sender: AnyObject) {
+    @IBAction func loginAction(_ sender: AnyObject) {
         let email = self.emailTextField.text
         let password = self.passwordTextField.text
         
         if email != "" && password != ""
         {
-            FIREBASE_REF.authUser(email, password: password, withCompletionBlock: { error, authData in
+            FIREBASE_REF?.authUser(email, password: password, withCompletionBlock: { error, authData in
                 
                 if error == nil
                 {
-                    NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: "uid")
+                    UserDefaults.standard.setValue(authData?.uid, forKey: "uid")
                 }
                 else
                 {
-                    let alert = UIAlertController(title: "Login Failed", message: "Email and Password Don't Match. Re-enter Credentials.", preferredStyle: UIAlertControllerStyle.Alert)
-                    let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+                    let alert = UIAlertController(title: "Login Failed", message: "Email and Password Don't Match. Re-enter Credentials.", preferredStyle: UIAlertControllerStyle.alert)
+                    let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
                     alert.addAction(action)
-                    self.presentViewController(alert, animated: true, completion: nil)
+                    self.present(alert, animated: true, completion: nil)
                 }
             })
         }
         else
         {
-            let alert = UIAlertController(title: "Login Failed", message: "Enter Email and Password.", preferredStyle: UIAlertControllerStyle.Alert)
-            let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+            let alert = UIAlertController(title: "Login Failed", message: "Enter Email and Password.", preferredStyle: UIAlertControllerStyle.alert)
+            let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
             alert.addAction(action)
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
         }
     }
 }

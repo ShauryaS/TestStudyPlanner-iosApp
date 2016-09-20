@@ -34,31 +34,31 @@ class CreateAccountViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func createAccount(sender: AnyObject) {
+    @IBAction func createAccount(_ sender: AnyObject) {
         let email = self.emailTextField.text!
         let password = self.passwordTextField.text
         let username = self.usernameTextField.text!
     
         if email != "" && password != ""
         {
-            FIREBASE_REF.createUser(email, password: password, withValueCompletionBlock: { (error, authData) -> Void in
+            FIREBASE_REF?.createUser(email, password: password, withValueCompletionBlock: { (error, authData) -> Void in
                 if error == nil
                 {
-                    FIREBASE_REF.authUser(email, password: password, withCompletionBlock: { error, authData in
+                    FIREBASE_REF?.authUser(email, password: password, withCompletionBlock: { error, authData in
                         print("in")
                         if error == nil
                         {
-                            NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: "uid")
-                            NSUserDefaults.standardUserDefaults().synchronize()
+                            UserDefaults.standard.setValue(authData?.uid, forKey: "uid")
+                            UserDefaults.standard.synchronize()
                             let data = ["username": username]
-                            FIREBASE_REF.childByAppendingPath("users").childByAppendingPath(authData.uid).setValue(data)
-                            self.view.makeToast(message: "Account Created", duration: 2.0, position: HRToastPositionDefault, title: "Account Status")
-                            self.dismissViewControllerAnimated(true,completion: nil)
-                            self.dismissViewControllerAnimated(true,completion: nil)
+                            FIREBASE_REF?.child(byAppendingPath: "users").child(byAppendingPath: authData?.uid).setValue(data)
+                            self.view.makeToast(message: "Account Created", duration: 2.0, position: HRToastPositionDefault as AnyObject, title: "Account Status")
+                            self.dismiss(animated: true,completion: nil)
+                            self.dismiss(animated: true,completion: nil)
                         }
                         else
                         {
-                            self.view.makeToast(message: "Account Failed to be Created", duration: 2.0, position: HRToastPositionDefault, title: "Account Status")
+                            self.view.makeToast(message: "Account Failed to be Created", duration: 2.0, position: HRToastPositionDefault as AnyObject, title: "Account Status")
                         }
                     })
                 }
@@ -71,15 +71,15 @@ class CreateAccountViewController: UIViewController {
         }
         else
         {
-            let alert = UIAlertController(title: "Error", message: "Enter Email and Password.", preferredStyle: UIAlertControllerStyle.Alert)
-            let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+            let alert = UIAlertController(title: "Error", message: "Enter Email and Password.", preferredStyle: UIAlertControllerStyle.alert)
+            let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
             alert.addAction(action)
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
-    @IBAction func cancel(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func cancel(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
         self.emailTextField.text="";
         self.passwordTextField.text="";
     }

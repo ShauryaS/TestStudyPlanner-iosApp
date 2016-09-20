@@ -36,33 +36,33 @@ class ChangePassword: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func changePassword(sender: AnyObject) {
+    @IBAction func changePassword(_ sender: AnyObject) {
         if (emailBox.text! != "" &&  oldPassBox.text! != "" && newPassBox.text! != "" && confirmPassBox.text! != ""){
             if(newPassBox.text! == confirmPassBox.text!){
-                FIREBASE_REF.changePasswordForUser(emailBox.text!, fromOld: oldPassBox.text!, toNew: newPassBox.text!, withCompletionBlock: { error in
+                FIREBASE_REF?.changePassword(forUser: emailBox.text!, fromOld: oldPassBox.text!, toNew: newPassBox.text!, withCompletionBlock: { error in
                     if error != nil{
-                        let alert = UIAlertController(title: "Password Update Failed", message: "Email and/or Password Don't Match.", preferredStyle: UIAlertControllerStyle.Alert)
-                        let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+                        let alert = UIAlertController(title: "Password Update Failed", message: "Email and/or Password Don't Match.", preferredStyle: UIAlertControllerStyle.alert)
+                        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
                         alert.addAction(action)
-                        self.presentViewController(alert, animated: true, completion: nil)
+                        self.present(alert, animated: true, completion: nil)
                     }
                     else{
-                        self.performSegueWithIdentifier("backToMainFromPasswordSegue", sender: nil)
+                        self.performSegue(withIdentifier: "backToMainFromPasswordSegue", sender: nil)
                     }
                 })
             }
             else{
-                let alert = UIAlertController(title: "Password Update Failed", message: "New Passwords Don't Match.", preferredStyle: UIAlertControllerStyle.Alert)
-                let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+                let alert = UIAlertController(title: "Password Update Failed", message: "New Passwords Don't Match.", preferredStyle: UIAlertControllerStyle.alert)
+                let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
                 alert.addAction(action)
-                self.presentViewController(alert, animated: true, completion: nil)
+                self.present(alert, animated: true, completion: nil)
             }
         }
         else{
-            let alert = UIAlertController(title: "Password Update Failed", message: "Fill Textfields To Change Password.", preferredStyle: UIAlertControllerStyle.Alert)
-            let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+            let alert = UIAlertController(title: "Password Update Failed", message: "Fill Textfields To Change Password.", preferredStyle: UIAlertControllerStyle.alert)
+            let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
             alert.addAction(action)
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
